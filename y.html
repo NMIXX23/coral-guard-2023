@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CoralGuard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/Logo-CORALGUARD.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5"
+        >
+          <img
+            class="img"
+            style="width: 80px"
+            src="img/Logo-CORALGUARD.png"
+            alt="Coral Guard"
+          />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">GIS</a>
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Program</a
+              >
+              <div class="dropdown-menu">
+                <a href="kepanitiaan.php" class="dropdown-item"
+                  >GIS & Conversation</a
+                >
+                <a href="lomba.php" class="dropdown-item">Biodiversity</a>
+                <a href="magang.php" class="dropdown-item">Power</a>
+                <a href="organisasi.php" class="dropdown-item">Adventure</a>
+                <a href="#" class="dropdown-item">Community</a>
+                <a href="#" class="dropdown-item">Books</a>
+                <a href="#" class="dropdown-item">News</a>
+                <a href="#" class="dropdown-item">Budidaya</a>
+              </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a
+            href="#search"
+            class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
+            >Search</a
+          >
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative">
+          <div class="owl-carousel-item position-relative">
+            <img
+              class="img-fluid img-fit"
+              src="img/WhatsApp Image 2023-09-27 at 14.41.23.jpeg"
+              alt=""
+            />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-start"
+            >
+              <div class="row justify-content-end" style="margin-top: 100px">
+                <div class="col-10 col-lg-8">
+                  <h3
+                    class="display-3 text-white animated slideInDown mb-6 text-end"
+                    style="margin-right: 150px; font-size: 100px"
+                  >
+                    CoralGuard
+                  </h3>
+                  <p
+                    class="fw-medium text-white mb-6 pb-2 text-end"
+                    style="margin-right: 150px; font-size: 30px"
+                  >
+                    Jelajahi Keajaiban Terumbu Karang Indonesia, salah satu
+                    Ekosistem Laut yang Menyimpan Keindahan Hidup, Energi, dan
+                    Potensi Tersembunyi!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(43, 57, 64, 0.5)"
+            >
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-3 text-white animated slideInDown mb-4">
+                      Temukan aktivitas yang cocok untukmu disini!
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- Carousel End -->
+
+      <!-- About Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center" style="margin-left: 50px">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <img
+                class="img-fluid width-100"
+                src="img/content.png"
+                style="max-width: 440px"
+              />
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="row g-0 text-start" style="margin-right: 50px">
+                <h1 class="mb-4" style="color: #008cee">CoralGuard</h1>
+                <p>
+                  Selamat datang di CoralGuard, portal eksplorasi keajaiban
+                  terumbu karang di Indonesia! Portal ini akan membuka pintu
+                  menuju ekosistem laut yang penuh misteri, di mana kehidupan
+                  yang beragam dan keindahan tak tergambarkan bersatu dalam
+                  harmoni. Ayo, Jadilah bagian kami sebagai upaya untuk
+                  melindungi ekosistem terumbu karang yang sangat berharga demi
+                  masa depan laut Indonesia!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Search Start -->
+      <div
+        id="search"
+        class="container-fluid bg-primary mb-5 wow fadeIn"
+        data-wow-delay="0.1s"
+        style="padding: 35px"
+      >
+        <div class="container">
+          <form action="search.php#search" method="get">
+            <div class="row g-2">
+              <div class="col-md-10">
+                <div class="row g-2">
+                  <div class="col-md-9">
+                    <input
+                      name="keyword"
+                      id="keyword"
+                      type="text"
+                      class="form-control border-0"
+                      placeholder="Masukan kata kunci"
+                      style="border-radius: 10px"
+                    />
+                  </div>
+                  <div class="col-md-3">
+                    <select
+                      name="kategori"
+                      id="kategori"
+                      class="form-select border-0"
+                      style="border-radius: 10px"
+                    >
+                      <option selected>Kategori</option>
+                      <option value="Biodiversity">Biodiversity</option>
+                      <option value="Power">Power</option>
+                      <option value="Adventure">Adventure</option>
+                      <option value="Conservation">Conservation</option>
+                      <option value="Community">Community</option>
+                      <option value="E-Books">E-Books</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <button
+                  type="submit"
+                  value="Cari"
+                  class="btn btn-dark border-0 w-100"
+                  style="border-radius: 10px"
+                >
+                  Cari
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Search End -->
+
+      <!-- Category Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h1 class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            Jelajahi Berdasarkan Kategori
+          </h1>
+          <div class="row">
+            <div class="col-md-4 col-sm-6 fadeInUp mb-3" data-wow-delay="0.1s">
+              <a class="cat-item rounded p-3" href="akademik.php">
+                <img src="/img/icon/Clown-Fish.png" alt="Biodiversity" />
+                <h5 class="mb-3">Biodiversity</h5>
+                <p class="mb-0">10 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item rounded p-3" href="nonakademik.php">
+                <img src="/img/icon/Lightning-Bolt.png" alt="Power" />
+                <h5 class="mb-3">Power</h5>
+                <p class="mb-0">12 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.3s">
+              <a class="cat-item rounded p-3" href="kepanitiaan.php">
+                <img src="/img/icon/Snorkel.png" alt="Adventure" />
+                <h5 class="mb-3">Adventure</h5>
+                <p class="mb-0">20 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp mb-3" data-wow-delay="0.5s">
+              <a class="cat-item rounded p-3" a href="lomba.php">
+                <img src="/img/icon/Gis.png" alt="Gis & Conservation" />
+                <h5 class="mb-3">Gis & Conservation</h5>
+                <p class="mb-0">5 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item rounded p-3" href="magang.php">
+                <img src="/img/icon/User-Groups.png" alt="Community" />
+                <h5 class="mb-3">Community</h5>
+                <p class="mb-0">9 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item rounded p-3" href="organisasi.php">
+                <img src="/img/icon/Knowledge-Sharing.png" alt="E-Books" />
+                <h5 class="mb-3">E-Books</h5>
+                <p class="mb-0">2 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item rounded p-3" href="organisasi.php">
+                <img src="/img/icon/News.png" alt="E-Books" />
+                <h5 class="mb-3">News</h5>
+                <p class="mb-0">6 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item rounded p-3" href="organisasi.php">
+                <img src="/img/icon/Prabu.png" alt="E-Books" />
+                <h5 class="mb-3">Praktik & Budidaya</h5>
+                <p class="mb-0">8 Informasi Terbaru</p>
+              </a>
+            </div>
+            <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
+              <a class="cat-item rounded p-3" href="organisasi.php">
+                <img src="/img/icon/Penyakit.png" alt="E-Books" />
+                <h5 class="mb-3">Penyakit</h5>
+                <p class="mb-0">3 Informasi Terbaru</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category End -->
+
+      <!-- Founder Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h1
+            class="text-center mb-5 wow fadeInUp"
+            data-wow-delay="0.1s"
+            style="color: #008cee"
+          >
+            Founder CoralGuard
+          </h1>
+          <div class="row g-4">
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="akademik.php">
+                <img
+                  src="/img/founder/nisrina.png"
+                  alt="Nisrina Ishmah"
+                  class="fit-image"
+                />
+              </a>
+              <div
+                style="
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-right: 40px;
+                  text-align: center;
+                "
+              >
+                <h5 class="mb-0" style="color: #008cee">Nisrina Ishmah</h5>
+                <p class="mb-0" style="color: #008cee">J0303211111</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="nonakademik.php">
+                <img
+                  src="/img/founder/yasir.png"
+                  alt="Muhammad Yasir Amri"
+                  class="fit-image"
+                />
+                <div
+                  style="
+                    align-items: center;
+                    margin-top: 20px;
+                    text-align: center;
+                  "
+                >
+                  <h5 style="color: #008cee">Muhammad Yasir</h5>
+                  <p class="mb-0">J0303211100</p>
+                </div>
+              </a>
+            </div>
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="nonakademik.php">
+                <img
+                  src="/img/founder/Rizki.png"
+                  alt="Rizki Novian"
+                  class="fit-image"
+                />
+              </a>
+              <div
+                style="
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-right: 40px;
+                  text-align: center;
+                "
+              >
+                <h5 class="mb-0" style="color: #008cee">Rizki Novian</h5>
+                <p class="mb-0" style="color: #008cee">J0303211057</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="nonakademik.php">
+                <img
+                  src="/img/founder/afi.png"
+                  alt="Huriya Afifah"
+                  class="fit-image"
+                />
+              </a>
+              <div
+                style="
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-right: 40px;
+                  text-align: center;
+                "
+              >
+                <h5 class="mb-0" style="color: #008cee">Huriya Afifah</h5>
+                <p class="mb-0" style="color: #008cee">X1004231170</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="nonakademik.php">
+                <img
+                  src="/img/founder/dila.png"
+                  alt="Wadiaah Nurfadhlah"
+                  class="fit-image"
+                />
+              </a>
+              <div
+                style="
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-right: 40px;
+                  text-align: center;
+                "
+              >
+                <h5 class="mb-0" style="color: #008cee">Wadiaah Nurfadhlah</h5>
+                <p class="mb-0" style="color: #008cee">X1003231011</p>
+              </div>
+            </div>
+            <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item-ca" href="nonakademik.php">
+                <img
+                  src="/img/founder/j0.png"
+                  alt="Josepri Jamal"
+                  class="fit-image"
+                />
+              </a>
+              <div
+                style="
+                  align-items: center;
+                  margin-top: 20px;
+                  margin-right: 40px;
+                  text-align: center;
+                "
+              >
+                <h5 class="mb-0" style="color: #008cee">Josepri Jamal</h5>
+                <p class="mb-0" style="color: #008cee">X1004231186</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <h1 class="text-center mb-5">Founder Student CACO</h1>
+          <div class="owl-carousel testimonial-carousel">
+            <img
+              src="/img/WhatsApp Image 2023-09-27 at 14.40.51 (1).jpeg"
+              alt="Founder"
+            />
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>(sambutan nisi)</p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-1.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Nisrina Ishmah Mahira</h5>
+                  <small>J0303211111</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>(sambutan naya)</p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-2.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Kanaya Shabilla</h5>
+                  <small>J0303211155</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>(sambutan cia)</p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-3.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Allicia Galuh Paramita</h5>
+                  <small>J0303211069</small>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-item bg-light rounded p-4">
+              <i class="fa fa-quote-left fa-2x text-primary mb-3"></i>
+              <p>(sambutan aisa)</p>
+              <div class="d-flex align-items-center">
+                <img
+                  class="img-fluid flex-shrink-0 rounded"
+                  src="img/testimonial-4.jpg"
+                  style="width: 50px; height: 50px"
+                />
+                <div class="ps-3">
+                  <h5 class="mb-1">Aisya Asmaningrum</h5>
+                  <small>J0303211178</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- Testimonial End -->
+
+      <!-- About Start -->
+      <div>
+        <div class="container">
+          <p
+            class="mb-4 text-center"
+            style="margin-left: 325px; margin-right: 325px"
+          >
+            "Sebagai pendiri CoralGuard, kami dari NMIXX TEAM merasa sangat
+            bersyukur dan bahagia karena telah berhasil membuat platform yang
+            siap menginspirasi masyarakat untuk lebih menghargai dan peduli
+            terhadap terumbu karang di Indonesia. Ini adalah langkah penting
+            dalam menjaga kekayaan alam bawah laut kita, kami berkomitmen untuk
+            terus memupuk semangat pelestarian serta meningkatkan kesadaran akan
+            keindahan ekosistem ini."
+          </p>
+          <p class="mb-4 text-center">-Nisrina Ishmah (Project Manager)</p>
+          <!-- <p>Visi:</p>
+          <p>
+            <i class="fa fa-check text-primary p-6"></i>Mewujudkan KM Vokasi
+            yang adaptif, unggul, dan harmonis dalam menciptakan Sekolah Vokasi
+            IPB #SemakinJuara
+          </p> -->
+          <!-- <br />
+              <p>Misi:</p>
+              <p>
+                <i class="fa fa-check text-primary p-6"></i>Merangkai
+                Pengembangan
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Merangkai
+                Kesejahteraan
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Merangkai
+                Internalisasi
+              </p>
+              <p>
+                <i class="fa fa-check text-primary me-3"></i>Merangkai
+                Pergerakan
+              </p>
+              <a class="btn btn-primary py-3 px-5 mt-3" href="about.html#bem"
+                >Lihat Selengkapnya</a
+              >
+              </p> -->
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-black-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6 mt-0">
+              <img
+                src="img/Logo-CORALGUARD.png"
+                alt="Student CACO"
+                style="width: 80%"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">CoralGuard</h5>
+              <a class="btn btn-link text-black-50" href="about.html#sc"
+                >Home</a
+              >
+              <a class="btn btn-link text-black-50" href="kontak.html">About</a>
+              <a class="btn btn-link text-black-50" href="kontak.html"
+                >Contact</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">Quick Links</h5>
+              <a class="btn btn-link text-black-50" href="akademik.php"
+                >CoralGIS</a
+              >
+              <a class="btn btn-link text-black-50" href="nonakademik.php"
+                >Biodiversity</a
+              >
+              <a class="btn btn-link text-black-50" href="kepanitiaan.php"
+                >Power</a
+              >
+              <a class="btn btn-link text-black-50" href="lomba.php"
+                >Adventure</a
+              >
+              <a class="btn btn-link text-black-50" href="magang.php"
+                >Conservation</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >Community</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >Books</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >News</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">Contaxt</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>Jl. Kumbang No.14,
+                RT.02/RW.06, Babakan, Kecamatan Bogor Tengah, Kota Bogor, Jawa
+                Barat 16128
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+6289624873142
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>supportcoralguard@gmail.com
+              </p>
+              <div class="d-flex pt-2">
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://instagram.com/bemsvipb"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://twitter.com/bemsvipb"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://twitter.com/bemsvipb"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://youtube.com/@bemsekolahvokasiipb7205"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.tiktok.com/@bemsvipb.kastrat"
+                  ><i class="fab bi-tiktok" style="font: bold"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy;
+                <a class="border-bottom" href="#" style="color: black"
+                  >StudentCACO</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@1.10.5/font/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

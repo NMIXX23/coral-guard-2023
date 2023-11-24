@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CoralGuard</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/Logo-CORALGUARD.png" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="bg-white p-0">
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <!-- Spinner End -->
+
+      <!-- Navbar Start -->
+      <nav
+        class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
+      >
+        <a
+          href="index.html"
+          class="navbar-brand d-flex align-items-center text-center py-0 px-4 px-lg-5"
+        >
+          <img
+            class="img"
+            style="width: 80px"
+            src="img/Logo-CORALGUARD.png"
+            alt="StudentCACO"
+          />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler me-4"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link">GIS</a>
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link active">About</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Program</a
+              >
+              <div class="dropdown-menu">
+                <a href="kepanitiaan.php" class="dropdown-item"
+                  >GIS & Conversation</a
+                >
+                <a href="lomba.php" class="dropdown-item">Biodiversity</a>
+                <a href="magang.php" class="dropdown-item">Power</a>
+                <a href="organisasi.php" class="dropdown-item">Adventure</a>
+                <a href="#" class="dropdown-item">Community</a>
+                <a href="#" class="dropdown-item">Books</a>
+                <a href="#" class="dropdown-item">News</a>
+                <a href="#" class="dropdown-item">Budidaya</a>
+              </div>
+            </div>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+          <a
+            href="#search"
+            class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block"
+            >Search</a
+          >
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Carousel Start -->
+      <div class="container-fluid p-0">
+        <div class="owl-carousel header-carousel position-relative">
+          <div class="owl-carousel-item position-relative">
+            <img class="img-fluid img-fit" src="img/image 38.png" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-start"
+            ></div>
+          </div>
+          <!-- <div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="img/carousel-2.jpg" alt="" />
+            <div
+              class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center"
+              style="background: rgba(43, 57, 64, 0.5)"
+            >
+              <div class="container">
+                <div class="row justify-content-start">
+                  <div class="col-10 col-lg-8">
+                    <h1 class="display-3 text-white animated slideInDown mb-4">
+                      Temukan aktivitas yang cocok untukmu disini!
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <!-- Carousel End -->
+
+      <!-- About Start -->
+      <div id="sc" class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="mb-4">Tentang CoralGuard</h1>
+              <p class="mb-4">
+                CoralGuard adalah sebuah platform edukasi yang bertujuan untuk
+                melindungi ekosistem terumbu karang di Indonesia. Platform ini
+                akan menyoroti pemetaan keberadaan terumbu karang, biodiversitas
+                yang hidup di terumbu karang, pengaruh terumbu karang terhadap
+                energi ataupun sebaliknya, serta manfaat ekonomi seperti
+                pariwisata yang unik dikunjungi. Selain itu, platform ini juga
+                menguraikan berbagai ancaman terhadap terumbu karang dan
+                menyajikan solusi praktis, termasuk upaya konservasi untuk
+                mendukung pelestariannya.
+              </p>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="row g-0 text-start">
+                <img class="img-fluid width-100" src="img/logocg-about.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Visi -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h4 class="text-center mb-2 wow fadeInUp" data-wow-delay="0.1s">
+            Visi
+          </h4>
+          <div class="row">
+            <div class="fadeInUp mb-3" data-wow-delay="0.1s">
+              <a class="cat-item rounded p-3" style="background: #008cee">
+                <p
+                  class="mb-0"
+                  style="
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    padding-left: 80px;
+                    margin-right: 80px;
+                    text-align: center;
+                    color: white;
+                  "
+                >
+                  Menjadi Sumber Utama Edukasi dan Advokasi untuk Melindungi,
+                  Mempromosikan, dan Melestarikan Terumbu Karang Indonesia demi
+                  Kehidupan Laut yang Berkelanjutan.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Visi -->
+
+      <!-- Misi -->
+      <div class="container-xxl py-5">
+        <div class="container">
+          <h4 class="text-center mb-2 wow fadeInUp" data-wow-delay="0.1s">
+            Misi
+          </h4>
+          <div class="row">
+            <div class="col-md-6 col-sm-12 fadeInUp mb-3" data-wow-delay="0.1s">
+              <a class="cat-item rounded p-3" style="background: #008cee">
+                <h5 style="color: white">Informasi Terumbu Karang</h5>
+                <p class="mb-0" style="color: white">
+                  Menyediakan informasi akurat tentang pemetaan kondisi terumbu
+                  karang, biodiversitas, perannya dalam ekosistem global, dan
+                  dampak terumbu karang terhadap lingkungan dan energi untuk
+                  meningkatkan kesadaran dan pemahaman.
+                </p>
+              </a>
+            </div>
+            <div class="col-md-6 col-sm-12 fadeInUp" data-wow-delay="0.1s">
+              <a class="cat-item rounded p-3" style="background: #008cee">
+                <h5 style="color: white">Konservasi Terumbu Karang</h5>
+                <p class="mb-0" style="color: white">
+                  Bekerja sama dengan mitra untuk mengawasi, mengelola, dan
+                  melindungi terumbu karang serta mengurangi ancamannya termasuk
+                  dari perubahan iklim, polusi, hingga aktivitas manusia.
+                </p></a
+              >
+            </div>
+            <div class="col-md-6 col-sm-12 fadeInUp" data-wow-delay="0.3s">
+              <a class="cat-item rounded p-3" style="background: #008cee">
+                <h5 style="color: white">Partisipasi Masyarakat</h5>
+                <p class="mb-0" style="color: white">
+                  Menyediakan tempat bagi masyarakat untuk berbagi pengalaman,
+                  Menyediakan wadah bagi berbagai mitra untuk berbagi
+                  pengetahuan, Memberi peluang untuk mendukung pelestarian
+                  melalui donasi dan aksi nyata.
+                </p>
+              </a>
+            </div>
+            <div class="col-md-6 col-sm-12 fadeInUp mb-3" data-wow-delay="0.5s">
+              <a class="cat-item rounded p-3" style="background: #008cee">
+                <h5 style="color: white">Promosi Pariwisata</h5>
+                <p class="mb-0" style="color: white">
+                  Mempromosikan berbagai tempat pengembangan pariwisata
+                  berkelanjutan yang kegiataannya menghormati terumbu karang dan
+                  ekosistem maritim, juga beberapa kegiatan edukasi untuk
+                  memulihkan kembali penanaman terumbu karang.
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Misi -->
+
+      <!-- Kenalan YUK -->
+      <div id="sc" class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <h1 class="mb-4" style="color: #008cee; width: 60%;">Kenalan sama Terumbu Karang, Yuk!</h1>
+              <p class="mb-4">
+                Terumbu karang merupakan ekosistem yang dibangun oleh biota laut
+                penghasil kapur, terutama oleh hewan karang, yang hidup di dasar
+                laut maupun kolom air. Hewan karang, yang merupakan penyusun
+                utama terumbu karang, terdiri dari polip dan skeleton (Gambar
+                2). Polip merupakan bagian yang lunak, sedangkan skeleton
+                merupakan bagian yang keras. Pada bagian polip terdapat tentakel
+                (tangan-tangan) untuk menangkap plankton sebagai sumber
+                makanannya. Setiap polip karang mengsekresikan zat kapur CaCO
+                yang membentuk kerangka skeleton karang
+              </p>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <div class="row g-0 text-start">
+                <img
+                  class="img-fluid width-100"
+                  src="img/content/kenalan.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Kenalan YUK -->
+
+      <!-- Faktor -->
+      <div id="sc" class="container-xxl py-5">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <h1 class="text-center mb-2 wow fadeInUp" data-wow-delay="0.1s" style="color: #008cee;">
+              Faktor yang Mempengaruhi Sebaran Terumbu Karang
+            </h1>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+              <div class="row g-0 text-start">
+                <img class="img-fluid width-100" src="img/content/Faktor.png" />
+              </div>
+            </div>
+            <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+              <p class="mb-4">
+                <ul style="list-style-type: decimal;">
+                  1. Suhu Perairan Karang dapat hidup pada suhu perairan di atas
+                  18° C.
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  2. Cahaya Matahari Karang hidup bersimbiosis dengan algazooxanthellae, yang hidup di dalam jaringan karang sehingga memerlukan cahaya matahari untuk proses fotosintesis.
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  3.Salinitas Salinitas ideal bagi pertumbuhan adalah berkisar antara 30-36‰. 
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  4. Sedimentasi Butiran sedimen dapat menutupi polip karang, dan bila berlangsung lama bisa menyebabkan kematian karang.
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  5. Kualitas perairan Perairan yang tercemar, karena limbah industri maupun rumah tangga akan mengganggu pertumbuhan dan perkembangan karang. 
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  6. Arus dan sirkulasi air laut Arus dan sirkulasi air diperlukan dalam penyuplaian makanan guna pertumbuhan karang dan suplai oksigen dari laut lepas. 
+                </ul>
+                <ul style="list-style-type: decimal;">
+                  7. Substrat Larva karang yang disebut planula memerlukan substrat yang keras dan stabil untuk menempel, hingga tumbuh menjadi karang dewasa
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Faktor -->
+
+      <!-- Footer Start -->
+      <div
+        class="container-fluid bg-dark text-black-50 footer pt-5 mt-5 wow fadeIn"
+        data-wow-delay="0.1s"
+      >
+        <div class="container py-5">
+          <div class="row g-5">
+            <div class="col-lg-3 col-md-6 mt-0">
+              <img
+                src="img/Logo-CORALGUARD.png"
+                alt="Student CACO"
+                style="width: 80%"
+              />
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">CoralGuard</h5>
+              <a class="btn btn-link text-black-50" href="about.html#sc"
+                >Home</a
+              >
+              <a class="btn btn-link text-black-50" href="kontak.html">About</a>
+              <a class="btn btn-link text-black-50" href="kontak.html"
+                >Contact</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">Quick Links</h5>
+              <a class="btn btn-link text-black-50" href="akademik.php"
+                >CoralGIS</a
+              >
+              <a class="btn btn-link text-black-50" href="nonakademik.php"
+                >Biodiversity</a
+              >
+              <a class="btn btn-link text-black-50" href="kepanitiaan.php"
+                >Power</a
+              >
+              <a class="btn btn-link text-black-50" href="lomba.php"
+                >Adventure</a
+              >
+              <a class="btn btn-link text-black-50" href="magang.php"
+                >Conservation</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >Community</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >Books</a
+              >
+              <a class="btn btn-link text-black-50" href="organisasi.php"
+                >News</a
+              >
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <h5 class="text-black mb-4">Contaxt</h5>
+              <p class="mb-2">
+                <i class="fa fa-map-marker-alt me-3"></i>Jl. Kumbang No.14,
+                RT.02/RW.06, Babakan, Kecamatan Bogor Tengah, Kota Bogor, Jawa
+                Barat 16128
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-phone-alt me-3"></i>+6289624873142
+              </p>
+              <p class="mb-2">
+                <i class="fa fa-envelope me-3"></i>supportcoralguard@gmail.com
+              </p>
+              <div class="d-flex pt-2">
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://instagram.com/bemsvipb"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://twitter.com/bemsvipb"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://twitter.com/bemsvipb"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://youtube.com/@bemsekolahvokasiipb7205"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+                <a
+                  class="btn btn-outline-light btn-social"
+                  href="https://www.tiktok.com/@bemsvipb.kastrat"
+                  ><i class="fab bi-tiktok" style="font: bold"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="copyright">
+            <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy;
+                <a class="border-bottom" href="#" style="color: black"
+                  >StudentCACO</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@1.10.5/font/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
