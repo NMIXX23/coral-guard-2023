@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 23 Nov 2023 pada 03.04
--- Versi server: 10.4.28-MariaDB
--- Versi PHP: 8.2.4
+-- Generation Time: Nov 24, 2023 at 09:55 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_biodiversity`
+-- Table structure for table `t_biodiversity`
 --
 
 CREATE TABLE `t_biodiversity` (
@@ -34,18 +34,19 @@ CREATE TABLE `t_biodiversity` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_biodiversity`
+-- Dumping data for table `t_biodiversity`
 --
 
 INSERT INTO `t_biodiversity` (`id`, `nama_biodiversity`, `foto_biodiversity`) VALUES
-(4, 'Bandung', '654cc146539b2.jpg'),
-(5, 'Jakarta 55', '654cc14ee95f2.png'),
-(6, '1', '2');
+(7, 'Fish', '656030009e793.png'),
+(8, 'Coral', '65603435aaeb9.png'),
+(9, 'Crustacea', '6560346098641.png'),
+(10, 'Seaweed', '656034786110e.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_jenis_bio`
+-- Table structure for table `t_jenis_bio`
 --
 
 CREATE TABLE `t_jenis_bio` (
@@ -57,19 +58,35 @@ CREATE TABLE `t_jenis_bio` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_jenis_bio`
+-- Dumping data for table `t_jenis_bio`
 --
 
 INSERT INTO `t_jenis_bio` (`id`, `id_biodiversity`, `nama_jenis_bio`, `deskripsi_jenis_bio`, `foto_jenis_bio`) VALUES
 (7, 4, 'Bandung', '5', '654cc30241546.jpg'),
 (8, 5, 'Bandung 2222', '5', '654cc16727dc9.png'),
 (9, 5, '2', '2', '654cc3f8de22d.png'),
-(10, 4, '22', '22', '654d81ee08726.jpg');
+(10, 4, '22', '22', '654d81ee08726.jpg'),
+(11, 7, 'IKAN BLACK TANG', 'Ikan black tang merupakan spesies dari famili Acanthuridae. Ikan ini mempunyai tubuh dengan panjang maksimum 21 cm, badan oval warna coklat kehitaman hitam dan moncong yang menonjol. Pangkal ekor terdapat warna putih. Menempati habitat', '6560309721269.png'),
+(12, 7, 'IKAN DAKOCAN', 'Ikan dakocan dengan nama latin Dascyllus aruanus merupakan ikan karang kecil yang biasanya ditemukan di perairan tropis. Ikan dakocan merupakan spesies dari famili Pomacentridae. Ciri-ciri ikan ini memiliki panjang tubuh maksimal 10 cm, warna dasar putih dengan 3 garis hitam, depan mata berwarna putih, ekor berwarna abu-abu', '6560332157498.png'),
+(13, 7, 'IKAN JULUNG', 'Ikan julung dengan nama latin fistularia commersonii merupakan spesies dari famili Fituilaridae. Ikan ini mempunyai panjang tubuh maksimal 160 cm, bentuk runcing memanjang, warna hijau di dorsal , keperakan di perut, ekor meruncing panjang. Dua spot biru di punggung.', '65603366882d6.png'),
+(14, 7, 'IKAN JANGGOT KUNING', 'sebuah organisasi nirlaba di Indonesia. Tujuannya adalah untuk melibatkan penduduk desa dalam upaya konservasi terumbu karang di sekitar desa mereka; yakni berkomitmen melindungi terumbu karang dari aktivitas penangkapan ikan, dengan', '656033c0ee5b0.png'),
+(15, 8, 'CORALINE ALGAE', 'Coraline algae adalah jenis alga yang sering tumbuh pada permukaan terumbu karang, batu, dan substrat lain di lingkungan laut. Mereka merupakan alga merah yang memiliki kalsium karbonat di dinding sel mereka, membuat mereka berperan penting', '6560354000af9.png'),
+(16, 8, 'HALIMEDA', 'Halimeda adalah makroalga berjenis alga hijau yang membentuk struktur yang mirip tumbuhan. Mereka memiliki batang bersekat-sekat, daun-daun datar, dan cabang-cabang yang menyerupai daun. Halimeda sering ditemukan di terumbu karang', '65603563d9c3d.png'),
+(17, 8, 'ZOANTHUS SOCIATUS', 'Zoanthus sociatus adalah spesies Zoanthids yang sering ditemukan di terumbu karang di berbagai perairan tropis. Mereka memiliki polip berbentuk tabung yang biasanya tersusun dalam kelompok-kelompok yang padat. Salah satu ciri khas', '656035a3d89ff.png'),
+(18, 8, 'ACROPORA CERVICORNIS', 'Terumbu ini berbentuk seperti pipa kecil yang ada di dalam laut. koloni terumbu ini dapat berkumpul hingga beberapa meter. Terumbu ini tersusun dari cabang- cabang dan membentuk terumbu karang yang lebat, serta cabang- cabang yang silindris', '65603607b3edb.png'),
+(19, 9, 'CALCINUS MINUTUS', 'Calcinus minutus adalah spesies kelomang yang termasuk dalam famili Diogenidae. Ia juga dikenal sebagai kelomang putih kecil atau kelomang berjari oranye. Hewan ini berasal', '656036325162e.png'),
+(20, 9, 'STONE CRAB', 'Stone crab dikenal sebagai kepiting batu merupakan kelompok hewan ordo Decapoda dalam famili Xanthidae. Famili Xanthidae memiliki ', '65603674a451f.png'),
+(21, 9, 'ALLOGALATHEA ELEGANS', 'Allogalathea elegans adalah spesies lobster kecil yang termasuk dalam famili Galatheidae, genus Allogalathea. Spesies ini', '6560369c2828b.png'),
+(22, 9, 'UDANG MANTIS', 'Udang mantis adalah sekelompok krustasea laut yang termasuk dalam ordo Stomatopoda. Mereka memiliki anggota badan tambahan yang dapat digunakan untuk menyerang', '656036b82c82c.png'),
+(23, 10, 'GELIDIUM SP.', 'Rumput laut jenis ini merupakan salah satu spesies dari Rhodophyta (rumput laut merah). Warna merah pada rumput laut ini disebabkan oleh pigmen fikoeritrin. Gelidium sp. memiliki panjang kurang lebih 20 cm dan lebar 1,5 mm. Thallusnya berwarna merah, coklat, hijau-coklat', '6560372954154.png'),
+(24, 10, 'GRACILARIA VERRUCCOSA', 'Rumput laut jenis ini merupakan salah satu spesies dari Rhodophyta (rumput laut merah). Sama seperti jenis rumput lainnya, G. verrucosa memiliki bentukan yang menyerupai akar, batang, daun, atau buah yang disebut thallus. Ciri-ciri umum G. verrucosa pada bentuk', '6560375e631c2.png'),
+(25, 10, 'ACANTOPHORA SPICIFERA', 'Rumput laut jenis Acanthopora sp. merupakan salah satu contoh Rhodophyta (rumput laut merah). Thallus silindris, percabangan bebas, tegak, terdapat duri-duri pendek sekitar thallus yang merupakan karakteristik jenis ini.', '6560379617407.png'),
+(26, 10, 'EUCHEUMA COTTONII', 'Rumput laut jenis ini merupakan salah satu spesies dari Rhodophyta (rumput laut merah). E. cottonii dapat dibedakan dari thallusny di mana thallusnya bercabang-cabang berbentuk silindris atau pipih, percabangannya tidak teratur dan kasar', '6560383457cd1.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_kategori`
+-- Table structure for table `t_kategori`
 --
 
 CREATE TABLE `t_kategori` (
@@ -79,17 +96,18 @@ CREATE TABLE `t_kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_kategori`
+-- Dumping data for table `t_kategori`
 --
 
 INSERT INTO `t_kategori` (`id`, `kategori`, `foto_kategori`) VALUES
-(3, 'Ruang Diskusi', '654cc136b7328.png'),
-(4, 'scuba', '654cc13f7d894.png');
+(5, 'Snorkeling', '655f954747058.png'),
+(6, 'Scuba', '655f9560afd78.png'),
+(7, 'Pantai', '655f956dd3447.png');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_koleksi`
+-- Table structure for table `t_koleksi`
 --
 
 CREATE TABLE `t_koleksi` (
@@ -100,7 +118,7 @@ CREATE TABLE `t_koleksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_koleksi`
+-- Dumping data for table `t_koleksi`
 --
 
 INSERT INTO `t_koleksi` (`id`, `id_tempat`, `id_member`, `tanggal_koleksi`) VALUES
@@ -111,7 +129,7 @@ INSERT INTO `t_koleksi` (`id`, `id_tempat`, `id_member`, `tanggal_koleksi`) VALU
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_komentar`
+-- Table structure for table `t_komentar`
 --
 
 CREATE TABLE `t_komentar` (
@@ -122,7 +140,7 @@ CREATE TABLE `t_komentar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_komentar`
+-- Dumping data for table `t_komentar`
 --
 
 INSERT INTO `t_komentar` (`id`, `id_post`, `id_member`, `komentar`) VALUES
@@ -130,12 +148,14 @@ INSERT INTO `t_komentar` (`id`, `id_post`, `id_member`, `komentar`) VALUES
 (3, 4, 10, 'hai aku komen lagi nih'),
 (4, 3, 10, 'halooo'),
 (5, 2, 12, 'halooo'),
-(6, 3, 13, 'haloo saya pengguna baru');
+(6, 3, 13, 'haloo saya pengguna baru'),
+(7, 5, 18, ' buat yg ingin datang ke sini klian bisa liat spesies ikan warna-warni, penyu, dan bahkan terumbu karang yang masih terjaga kelestariannya lho!!!'),
+(8, 5, 18, 'kita juga bisa nyewa sepeda atau cidomo (kuda-kudaan) buat menjelajahi pulau, berkeliling dengan perahu untuk menikmati matahari terbenam yang menakjubkan, atau sekadar bersantai di pantai sambil menikmati angin sepoi-sepoi:) cobain deh guys seru abies!!!');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_maps`
+-- Table structure for table `t_maps`
 --
 
 CREATE TABLE `t_maps` (
@@ -150,7 +170,7 @@ CREATE TABLE `t_maps` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data untuk tabel `t_maps`
+-- Dumping data for table `t_maps`
 --
 
 INSERT INTO `t_maps` (`id`, `kategori`, `region`, `latitude`, `longitude`, `gambar`, `user_create`, `validasi`) VALUES
@@ -260,12 +280,15 @@ INSERT INTO `t_maps` (`id`, `kategori`, `region`, `latitude`, `longitude`, `gamb
 (121, 'Buruk', 'TN BALI BARAT – BALI', '114.52340863905141', '-8.092194345588677', NULL, '1', 1),
 (122, 'Buruk', 'TN BALI BARAT – BALI', '114.52824611296636', '-8.096762910719871', NULL, '1', 1),
 (123, 'Sedang', 'TN BALI BARAT – BALI', '114.55919573257906', '-8.13464392993269', NULL, '1', 1),
-(126, '2', '2', '106.8296003', '-6.1600213', NULL, NULL, 0);
+(129, 'Buruk', 'TN WAKATOBI - SULAWESI TENGGARA', '123.86499710435761', '-5.78950632293472', '656015a43fafe.jpg', '27', 1),
+(130, 'Baik', 'TN BUNAKEN', '124.80204051112999', '1.7626446514675431', '656056010a2ab.jpg', '30', 0),
+(131, 'Baik', 'TN KEPULAUAN TOGEAN - SULAWESI TENGAH', '121.65779620379219', '-0.160587831073277', '6560564a685c2.png', '30', 0),
+(132, 'Baik', 'TN WAKATOBI - SULAWESI TENGGARA', '124.2915154896527', '-5.295173298973471', '656056bb352b8.png', '30', 1);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_member`
+-- Table structure for table `t_member`
 --
 
 CREATE TABLE `t_member` (
@@ -280,7 +303,7 @@ CREATE TABLE `t_member` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_member`
+-- Dumping data for table `t_member`
 --
 
 INSERT INTO `t_member` (`id`, `user_id`, `first_name`, `last_name`, `address`, `city`, `province`, `actor`) VALUES
@@ -290,12 +313,20 @@ INSERT INTO `t_member` (`id`, `user_id`, `first_name`, `last_name`, `address`, `
 (12, 19, 'budiman', 'sinaga', 'disana', 'Jakarta', '1', 2),
 (13, 20, 'Cahya', 'Nurani', 'disebelah sana', 'Jakarta', '1', 1),
 (14, 21, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, 22, NULL, NULL, NULL, NULL, NULL, NULL);
+(15, 22, NULL, NULL, NULL, NULL, NULL, NULL),
+(16, 23, NULL, NULL, NULL, NULL, NULL, NULL),
+(17, 24, NULL, NULL, NULL, NULL, NULL, NULL),
+(18, 25, 'Nisrina', 'Ishmah', 'Jl. Belimbing RT04/09, No.80, Kelurahan Tugu, Kecamatan Cimanggis, Kota Bandung, Jawa Barat', 'Bandung', '2', 2),
+(19, 26, NULL, NULL, NULL, NULL, NULL, NULL),
+(20, 27, NULL, NULL, NULL, NULL, NULL, NULL),
+(21, 28, NULL, NULL, NULL, NULL, NULL, NULL),
+(22, 29, NULL, NULL, NULL, NULL, NULL, NULL),
+(23, 30, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_post`
+-- Table structure for table `t_post`
 --
 
 CREATE TABLE `t_post` (
@@ -308,19 +339,20 @@ CREATE TABLE `t_post` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_post`
+-- Dumping data for table `t_post`
 --
 
 INSERT INTO `t_post` (`id`, `id_member`, `keywords`, `category`, `image`, `description`) VALUES
 (1, 9, 'nisrina', 1, '654913a694617.jpeg', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
 (2, 10, 'nisrina', 1, '6549149a8f886.png', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\n									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\n									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\n									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\n									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
 (3, 10, 'Widia', 2, '6549198d096c9.jpeg', '2'),
-(4, 9, 'Rahani', 1, '', '3');
+(4, 9, 'Rahani', 1, '', '3'),
+(5, 25, 'gili', 1, '655ff4799e8f7.jpeg', 'Seneng banget hari ini snorkeling di gili trawangan, terus aku ketemu terumbu karang cantik ini!!!');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_tempat_adventure`
+-- Table structure for table `t_tempat_adventure`
 --
 
 CREATE TABLE `t_tempat_adventure` (
@@ -333,18 +365,36 @@ CREATE TABLE `t_tempat_adventure` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_tempat_adventure`
+-- Dumping data for table `t_tempat_adventure`
 --
 
 INSERT INTO `t_tempat_adventure` (`id`, `nama_tempat`, `id_kategori`, `foto`, `alamat_tempat`, `nomor_hp`) VALUES
 (4, 'Tempat Makmur', 3, '654cc17c5d919.jpeg', 'Bandung', '28328392'),
 (5, 'Rahani', 3, '654cc18a006c2.jpg', '2', '085324237299'),
-(6, '25', 4, '654d823bf05f3.png', '25', '25');
+(6, '25', 4, '654d823bf05f3.png', '25', '25'),
+(7, 'Trip Karimun', 5, '655f9607d58a6.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075123'),
+(8, 'Trip Gilitrawangan', 5, '656039d67a454.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(9, 'Hello', 5, '65603a0cc32da.png', 'Jl. Bumbak Dauh Jl. Pulau Ambon No.4,Kerobokan, Kec. Kuta Utara, Kabupaten Badung,Bali 80361', '(+62)81383449707'),
+(10, '', 5, '65603a378f8d2.png', 'Pantai Yenanas, Yenbeser, Kec. Waigeo Sel., Kabupaten Raja Ampat, Papua Bar. 98482', '(+62) 81248813677'),
+(11, 'Scuba Go', 6, '65603aa188553.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(12, 'Tulamben Scuba', 6, '65603acb33922.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(13, 'Alpha World Diving', 6, '65603afb5bf3c.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(14, 'Two Fish Divers', 6, '65603b2a118ab.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(15, 'Pantai Marina', 7, '65603b73b4cfc.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(16, 'Pantai Ancol', 7, '65603b9819480.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(17, 'Pantai Sambolo', 7, '65603bbb0c36a.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(18, 'Pantai Bagendur', 7, '65603bdea4c37.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(19, 'Pantai Sadranan', 7, '65603c593562c.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(20, 'Pantai Derawan', 7, '65603c8165b55.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)628114834614'),
+(21, 'Blue Marin Dive', 6, '65603cc845570.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(22, 'Bali Diving', 6, '65603cec29e1b.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)85337075869'),
+(23, 'Aqua Marine Diving', 5, '65603d45bb29a.png', 'Petitenget St No.2A, Kerobokan Kelod, Kuta, Badung Regency, Bali 80361, Indonesia', '(+62)628114834614'),
+(24, 'Papua Diving', 5, '65603d6a2b8f4.png', 'Jl. Pantai Gili Trawangan, Gili Indah, Kec. Pemenang, Kabupaten Lombok Utara, Nusa Tenggara Bar. 83352', '(+62)628114834614');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `t_users`
+-- Table structure for table `t_users`
 --
 
 CREATE TABLE `t_users` (
@@ -359,7 +409,7 @@ CREATE TABLE `t_users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `t_users`
+-- Dumping data for table `t_users`
 --
 
 INSERT INTO `t_users` (`id`, `username`, `email`, `password`, `role`, `active`, `nomor_hp`, `photo`) VALUES
@@ -370,135 +420,143 @@ INSERT INTO `t_users` (`id`, `username`, `email`, `password`, `role`, `active`, 
 (19, 'budi', 'budiman@gmail.com', '$2y$10$NUsDgfDllowDHcA.mr5CmO7nRWCcYSl62zULUxbivhZbododpiU0y', 'MEMBER', 1, '09238947239', 'default.jpeg'),
 (20, 'cahya', 'cahya@gmail.com', '$2y$10$CDvVD.sPSEm3CjbATYihSOwccm3XTD4WB4FU1id3zf054kkZp.pDm', 'MEMBER', 1, '09728942', 'photo-profile/user20.png'),
 (21, 'ridho', 'ridho@gmail.com', '$2y$10$O35FnYCGE7D9ET0t4YZLBuKLmg3xJwuf5kd/9nuPn/R.wvAJ7TRjW', 'MEMBER', 1, '18219821', 'default.jpeg'),
-(22, 'yasir', 'yasir@gmail.com', '$2y$10$Gn5CdWkcaI.MqeQPz/NGN.IX.558v9eztwTcglu//1nvCAIbtF7Zm', 'MEMBER', 1, '2389238293', 'default.jpeg');
+(22, 'yasir', 'yasir@gmail.com', '$2y$10$Gn5CdWkcaI.MqeQPz/NGN.IX.558v9eztwTcglu//1nvCAIbtF7Zm', 'MEMBER', 1, '2389238293', 'default.jpeg'),
+(23, 'maku', 'manusiakuat@gmail.com', '$2y$10$42ceLJwKzItPzbWFaE3bT.ikZkVIcoI5hr2PC/9Kgxib4fS4oWu9.', 'MEMBER', 1, '081385192333', 'default.jpeg'),
+(24, 'nayiyeon', 'nayeon@gmail.com', '$2y$10$ikuafA/uotj/C1hrcoa./OXy7OLw05S81Y.iQ6JF/s8gUY2sfehJi', 'MEMBER', 1, '', 'default.jpeg'),
+(25, 'nisrinaishmah', 'nisrinaishmah@gmail.com', '$2y$10$34kVeNy/zHLQ9zr4vkA4/eDjY2rGRIHN6AlgI/x/rb4CO12nfkPJm', 'MEMBER', 1, '081385192476', 'photo-profile/user25.jpeg'),
+(26, 'wadi', 'wadiah@gmail.com', '$2y$10$JyNr.97xvDsVBqg7h7WzI.7FIoXz8ufjwhWFTj.R8Ne1VnvyEvJUO', 'MEMBER', 1, '081385192377', 'default.jpeg'),
+(27, 'nopiany', 'nopian@gmail.com', '$2y$10$VxWsX.V.9RoVRCSzonrJtuU6KMnu43ROYopeUEci/eTCoTlOpNpk2', 'MEMBER', 1, '08123', 'default.jpeg'),
+(28, 'karelsusanti', 'karelsusanti@gmail.com', '$2y$10$JW36Uye1JMMdZMgE7y0hy.5zr2f8a.L/2MN0laKl7nanRaVLqAJOC', 'MEMBER', 1, '081385190000', 'default.jpeg'),
+(29, 'nisrinaishmah', 'nisrinaishmah@gmail.com', '$2y$10$kJMp6EYiDqhwAEDEgAC3zO6FsQG/WWWCx08fJED7A/UWuF0eibwIS', 'MEMBER', 1, '081385192476', 'default.jpeg'),
+(30, 'nisrinaishmah', 'nishy@gmail.com', '$2y$10$IbJ/TzhWyBpWgFe2Ac1dVepNYUwMN.aRBFHEfzl5RkGgGgvzWpNRa', 'MEMBER', 1, '081385192476', 'default.jpeg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indeks untuk tabel `t_biodiversity`
+-- Indexes for table `t_biodiversity`
 --
 ALTER TABLE `t_biodiversity`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_jenis_bio`
+-- Indexes for table `t_jenis_bio`
 --
 ALTER TABLE `t_jenis_bio`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_kategori`
+-- Indexes for table `t_kategori`
 --
 ALTER TABLE `t_kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_koleksi`
+-- Indexes for table `t_koleksi`
 --
 ALTER TABLE `t_koleksi`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_komentar`
+-- Indexes for table `t_komentar`
 --
 ALTER TABLE `t_komentar`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_maps`
+-- Indexes for table `t_maps`
 --
 ALTER TABLE `t_maps`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_member`
+-- Indexes for table `t_member`
 --
 ALTER TABLE `t_member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_post`
+-- Indexes for table `t_post`
 --
 ALTER TABLE `t_post`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_tempat_adventure`
+-- Indexes for table `t_tempat_adventure`
 --
 ALTER TABLE `t_tempat_adventure`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `t_users`
+-- Indexes for table `t_users`
 --
 ALTER TABLE `t_users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `t_biodiversity`
+-- AUTO_INCREMENT for table `t_biodiversity`
 --
 ALTER TABLE `t_biodiversity`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT untuk tabel `t_jenis_bio`
---
-ALTER TABLE `t_jenis_bio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT untuk tabel `t_kategori`
+-- AUTO_INCREMENT for table `t_jenis_bio`
 --
-ALTER TABLE `t_kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `t_jenis_bio`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
--- AUTO_INCREMENT untuk tabel `t_koleksi`
+-- AUTO_INCREMENT for table `t_kategori`
+--
+ALTER TABLE `t_kategori`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `t_koleksi`
 --
 ALTER TABLE `t_koleksi`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `t_komentar`
+-- AUTO_INCREMENT for table `t_komentar`
 --
 ALTER TABLE `t_komentar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT untuk tabel `t_maps`
+-- AUTO_INCREMENT for table `t_maps`
 --
 ALTER TABLE `t_maps`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
--- AUTO_INCREMENT untuk tabel `t_member`
+-- AUTO_INCREMENT for table `t_member`
 --
 ALTER TABLE `t_member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT untuk tabel `t_post`
+-- AUTO_INCREMENT for table `t_post`
 --
 ALTER TABLE `t_post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT untuk tabel `t_tempat_adventure`
+-- AUTO_INCREMENT for table `t_tempat_adventure`
 --
 ALTER TABLE `t_tempat_adventure`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
--- AUTO_INCREMENT untuk tabel `t_users`
+-- AUTO_INCREMENT for table `t_users`
 --
 ALTER TABLE `t_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
