@@ -75,10 +75,10 @@ $data_search = json_decode($data_koordinat)->features;
 
 <body>
     <div class="container pt-3">
-        <a href="index.php" class="btn btn-danger btn-sm mb-3">
+        <a href="index.php" class="btn btn-primary btn-sm mb-3">
             Kembali
         </a>
-        <div style="font-size: 30px; color: blue; font-weight: bold;">GIS</div>
+        <div style="font-size: 30px; color: #008CEE; font-weight: bold;">GIS</div>
         <div class="container-fluid">
             <div class="row">
                 <!-- Kolom untuk Peta -->
