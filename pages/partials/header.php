@@ -70,17 +70,20 @@
               <a class="nav-link" href="?page=contact">Contact</a>
             <?php endif ?>
           </li>
-          <?php if (isset($_SESSION['login'])) : ?>
-            <li class="nav-item">
-              <a href="?page=input-lokasi" class="nav-link" style="padding-right: 30px;">
-                Tambah Titik
-              </a>
-            </li>
-          <?php endif ?>
-          <li class="nav-item" style="padding-right: 20px;">
-            <a target="_blank" href="maps.php" class="nav-link">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               GIS
             </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" target="_blank" href="maps.php">GIS</a>
+              </li>
+              <?php if (isset($_SESSION['login'])) : ?>
+              <li>
+                <a class="dropdown-item" href="?page=input-lokasi">Tambah Titik</a>
+              </li>
+            <?php endif ?>
+            </ul>
           </li>
           <?php if (empty($_SESSION["id_member"])) : ?>
             <li class="nav-item">
