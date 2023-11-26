@@ -1,4 +1,4 @@
-<?php include "/tempat/partials/header.php"; ?>
+<?php include "pages/partials/header.php"; ?>
 
 <?php
 include('koneksi.php');
@@ -54,11 +54,11 @@ $data_search = json_decode($data_koordinat)->features;
         <div class="container-fluid">
             <div class="row">
                 <!-- Kolom untuk Peta -->
-                <div class="col-sm-8">
-                    <div id="map" style="width: 100%; height: 600px;"></div>
+                <div class="col-md-6 col-md-8">
+                    <div id="map" style="width: 100%; height: 700px;"></div>
                 </div>
                 <!-- Kolom untuk Keterangan dan Pencarian -->
-                <div id="ket" class="col-sm-4">
+                <div id="ket" class="col-sm-6 col-md-4">
                     <!-- Tombol Pencarian -->
                     <div class="pencarian">
                         <div>
@@ -74,8 +74,31 @@ $data_search = json_decode($data_koordinat)->features;
                     <div class="keterangan" style="margin-top: 20px;">
                         <h5>Keterangan</h5>
                         <p style="color: #0089ed">Kondisi terumbu karang: </p>
+                        <ul>
+                            <li>
+                                <span class="red"></span>Buruk
+                                <p>mencerminkan kondisi ekosistem karang yang sangat terganggu, hampir mati, atau sudah mati, strukturnya hancur, dan keanekaragaman hayati rendah.</p>
+                            </li>
+                            <li>
+                                <span class="orange"></span>Rendah
+                                <p>mencerminkan kondisi ekosistem karang yang mengalami kerusakan serius, penurunan keanekaragaman hayati, dan minimnya tanda-tanda pemulihan.</p>
+                            </li>
+                            <li>
+                                <span class="yellow"></span>Sedang
+                                <p>mencerminkan kondisi ekosistem karang yang menunjukan tanda-tanda gangguan, beberapa area yang mengalami pemutihan, sampai kerusakan fisik.</p>
+                            </li>
+                            <li>
+                                <span class="green"></span>Baik
+                                <p>mencerminkan kondisi ekosistem karang yang menunjukan tanda-tanda gangguan, beberapa area yang mengalami pemutihan, sampai kerusakan fisik.</p>
+                            </li>
+                        </ul>
                         <!-- Tambahkan keterangan sesuai kebutuhan -->
                     </div>
+                </div>
+                <div class="col-12 mt-3">
+                    <a href="?page=input-lokasi" class="btn btn-primary btn-sm mt-3 col-12">
+                        Tambaha Titik
+                    </a>
                 </div>
             </div>
         </div>
