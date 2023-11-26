@@ -1,3 +1,5 @@
+<?php include "pages/partials/header.php"; ?>
+
 <?php
 include('koneksi.php');
 include('terumbu.php');
