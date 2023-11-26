@@ -1,5 +1,3 @@
-<?php include "pages/partials/header.php"; ?>
-
 <?php
 include('koneksi.php');
 include('terumbu.php');
@@ -35,8 +33,7 @@ $data_search = json_decode($data_koordinat)->features;
     <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-    <!-- Favicon -->
-    <link href="./assets/img/Logo-CORALGUARD.png" rel="icon" />
+
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
