@@ -1,7 +1,7 @@
 <footer>
     <div class="row" style="padding: 0px; margin: 0px;">
         <div class="col-md-4">
-            <img src="./assets/img/logo-CORALGUARD.png" width="50%" alt="Logo" style="margin-left: 50px; margin-top:50px;">
+            <img src="./assets/img/logo-01.png" width="50%" alt="Logo" style="margin-left: 50px; margin-top:50px;">
         </div>
         <div class="col-md-2 p-5">
             <h4>CoralGuard</h4>
@@ -29,7 +29,7 @@
             <h4>Contact</h4>
             <p><i class="fa fa-map-marker-alt"></i>Jl. Kumbang No.14,<br />RT.02/RW.06,<br />
                 Babakan, Kecamatan Bogor Tengah,<br />Kota Bogor, Jawa Barat <br />16128</p>
-            <p><i class="fa fa-phone"></i> +6281887192116</p>
+            <p><i class="fa fa-phone"></i> +(+62)81385192476</p>
             <p><i class="fa fa-envelope"></i> supportcoralguard@gmail.com</p>
 
             <div class="row">

@@ -1,3 +1,5 @@
+<?php include "/tempat/partials/header.php"; ?>
+
 <?php
 include('koneksi.php');
 include('terumbu.php');
@@ -20,25 +22,27 @@ $data_search = json_decode($data_koordinat)->features;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maps</title>
     <link rel="stylesheet" type="text/css" href="assets/layouts/assets/leaflet/leaflet.css">
-</link>
-<link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
-<script src="assets/layouts/assets/leaflet/leaflet.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="./assets/css/style3.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    </link>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.css" />
+    <script src="assets/layouts/assets/leaflet/leaflet.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-<script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
-<script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
-<style>
-html,
-body {
-    height: 100%;
-}
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
 
-;
-</style>
+        ;
+    </style>
 </head>
 
 <body>
@@ -47,8 +51,33 @@ body {
             Kembali
         </a>
         <div style="font-size: 30px; color: blue; font-weight: bold;">GIS</div>
-        <div class="col-sm-10">
-            <div id="map" style="width: 100%; height: 300px"></div>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Kolom untuk Peta -->
+                <div class="col-sm-8">
+                    <div id="map" style="width: 100%; height: 600px;"></div>
+                </div>
+                <!-- Kolom untuk Keterangan dan Pencarian -->
+                <div id="ket" class="col-sm-4">
+                    <!-- Tombol Pencarian -->
+                    <div class="pencarian">
+                        <div>
+                            <div class="input-group" style="margin-top: 20px;">
+                                <input name="keyword" id="keyword" type="text" class="form-control border-0" placeholder="Cari Region" style="border-radius: 10px;" />
+                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                    <i class="fas fa-search"></i> <!-- Ikon search dari Font Awesome -->
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Keterangan -->
+                    <div class="keterangan" style="margin-top: 20px;">
+                        <h5>Keterangan</h5>
+                        <p style="color: #0089ed">Kondisi terumbu karang: </p>
+                        <!-- Tambahkan keterangan sesuai kebutuhan -->
+                    </div>
+                </div>
+            </div>
         </div>
 
         <br><br>
@@ -82,7 +111,7 @@ body {
                                     -
                                 </strong>
                             <?php else : ?>
-                            <img src="images/lokasi/<?php echo $data['gambar'] ?>" class="img-fluid" style="width: 100px">
+                                <img src="images/lokasi/<?php echo $data['gambar'] ?>" class="img-fluid" style="width: 100px">
                             <?php endif ?>
                         </td>
                     </tr>
@@ -94,46 +123,46 @@ body {
 
     <!-- Kondisi terumbu karang lewat -->
     <link rel="stylesheet" type="text/css" href="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.css">
-</link>
+    </link>
 
-<script type="text/javascript">
-    new DataTable('#example');
-</script>
-<script src="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.js"></script>
-<script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="assets/layouts/qgis/layers/BatasKawasanTamanNasional_1.js"></script>
-<script src="assets/layouts/qgis/layers/CoralBaratBanten_24.js"></script>
-<script src="assets/layouts/qgis/layers/CoralBayuwangi_22.js"></script>
-<script src="assets/layouts/qgis/layers/CoralBlitarMalang_17.js"></script>
-<script src="assets/layouts/qgis/layers/CoralCagarAlamPulauNusaBarung_20.js"></script>
-<script src="assets/layouts/qgis/layers/CoralGarutTasikmalaya_19.js"></script>
-<script src="assets/layouts/qgis/layers/CoralLautSukabumi_18.js"></script>
-<script src="assets/layouts/qgis/layers/CoralPulauBawean_26.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNAlasPurwo_21.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNBaliBarat_29.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNBaluran_23.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNKarimunJawa_27.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNKepSeribu_30.js"></script>
-<script src="assets/layouts/qgis/layers/CoralTNUjungKulon_28.js"></script>
-<script src="assets/layouts/qgis/layers/CoralUtaraBanten_25.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassBaratBanten_14.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassBayuwangi_12.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassBlitarMalang_9.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassCagarAlamPulauNusaBarung_10.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassGarutTasikmalaya_8.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassLautSukabumi_7.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassPulauBawean_16.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNAlasPurwo_11.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNBaliBarat_5.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNBaluran_13.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNKarimunJawa_3.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNKepSeribu_4.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassTNUjungKulon_6.js"></script>
-<script src="assets/layouts/qgis/layers/SeagrassUtaraBanten_15.js"></script>
-<script src="assets/layouts/qgis/layers/Zona_2.js"></script>
-<script src="assets/layouts/qgis/layers/KondisiTerumbuKarang_31.js"></script>
-<script>
+    <script type="text/javascript">
+        new DataTable('#example');
+    </script>
+    <script src="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.js"></script>
+    <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/layouts/qgis/layers/BatasKawasanTamanNasional_1.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralBaratBanten_24.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralBayuwangi_22.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralBlitarMalang_17.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralCagarAlamPulauNusaBarung_20.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralGarutTasikmalaya_19.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralLautSukabumi_18.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralPulauBawean_26.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNAlasPurwo_21.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNBaliBarat_29.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNBaluran_23.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNKarimunJawa_27.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNKepSeribu_30.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralTNUjungKulon_28.js"></script>
+    <script src="assets/layouts/qgis/layers/CoralUtaraBanten_25.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassBaratBanten_14.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassBayuwangi_12.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassBlitarMalang_9.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassCagarAlamPulauNusaBarung_10.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassGarutTasikmalaya_8.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassLautSukabumi_7.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassPulauBawean_16.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNAlasPurwo_11.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNBaliBarat_5.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNBaluran_13.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNKarimunJawa_3.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNKepSeribu_4.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassTNUjungKulon_6.js"></script>
+    <script src="assets/layouts/qgis/layers/SeagrassUtaraBanten_15.js"></script>
+    <script src="assets/layouts/qgis/layers/Zona_2.js"></script>
+    <script src="assets/layouts/qgis/layers/KondisiTerumbuKarang_31.js"></script>
+    <script>
         // var map = L.map('map').setView([-6.6318077, 106.6751343], 8);
         function getDataSearch() {
             let data;
@@ -169,35 +198,35 @@ body {
                 let color = 'rgba(37,104,35,1.0)'
                 switch (feature.properties.Zona) {
                     case 'Rimba':
-                    color = 'rgba(224,226,76,1.0)';
-                    break;
+                        color = 'rgba(224,226,76,1.0)';
+                        break;
                     case 'Khusus':
-                    color = 'rgba(210,209,199,1.0)';
-                    break;
+                        color = 'rgba(210,209,199,1.0)';
+                        break;
                     case 'Pemanfaatan':
-                    color = 'rgba(180,237,24,1.0)';
-                    break;
+                        color = 'rgba(180,237,24,1.0)';
+                        break;
                     case 'Pemanfaatan':
-                    color = 'rgba(180,237,24,1.0)';
-                    break;
+                        color = 'rgba(180,237,24,1.0)';
+                        break;
                     case 'Perlindungan Bahari':
-                    color = 'rgba(97,144,220,1.0)';
-                    break;
+                        color = 'rgba(97,144,220,1.0)';
+                        break;
                     case 'Rehabilitasi':
-                    color = 'rgba(1,255,238,1.0)';
-                    break;
+                        color = 'rgba(1,255,238,1.0)';
+                        break;
                     case 'Religi Budaya dan Sejarah':
-                    color = 'rgba(255,1,234,1.0)';
-                    break;
+                        color = 'rgba(255,1,234,1.0)';
+                        break;
                     case 'Tradisional':
-                    color = 'rgba(140,113,24,1.0)';
-                    break;
+                        color = 'rgba(140,113,24,1.0)';
+                        break;
                     case 'Inti':
-                    color = 'rgba(213,43,51,1.0)';
-                    break;
+                        color = 'rgba(213,43,51,1.0)';
+                        break;
                     default:
-                    color = 'rgba(37,104,35,1.0)'
-                    break;
+                        color = 'rgba(37,104,35,1.0)'
+                        break;
                 }
                 return {
                     color: '#ffffff',
@@ -807,21 +836,21 @@ body {
                 }
                 switch (feature.properties.Kategori) {
                     case 'Baik':
-                    circle.color = 'rgba(35,35,35,1.0)';
-                    circle.fillColor = 'rgba(18,255,1,1.0)';
-                    break;
+                        circle.color = 'rgba(35,35,35,1.0)';
+                        circle.fillColor = 'rgba(18,255,1,1.0)';
+                        break;
                     case 'Sedang':
-                    circle.color = 'rgba(35,35,35,1.0)';
-                    circle.fillColor = 'rgba(238,255,3,1.0)';
-                    break;
+                        circle.color = 'rgba(35,35,35,1.0)';
+                        circle.fillColor = 'rgba(238,255,3,1.0)';
+                        break;
                     case 'Rendah':
-                    circle.color = 'rgba(35,35,35,1.0)';
-                    circle.fillColor = 'rgba(255,153,1,1.0)';
-                    break;
+                        circle.color = 'rgba(35,35,35,1.0)';
+                        circle.fillColor = 'rgba(255,153,1,1.0)';
+                        break;
                     case 'Buruk':
-                    circle.color = 'rgba(35,35,35,1.0)';
-                    circle.fillColor = 'rgba(254,0,30,1.0)';
-                    break;
+                        circle.color = 'rgba(35,35,35,1.0)';
+                        circle.fillColor = 'rgba(254,0,30,1.0)';
+                        break;
                 }
                 return L.circleMarker(latlng, circle);
             }
@@ -843,186 +872,186 @@ body {
         //end
         const baseLayers = {};
         const overlays = [{
-            label: 'Kondisi Terumbu Karang',
-            layer: KondisiTerumbuKarang,
-            children: [{
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_0.png" /> <p>Baik</p></div>'
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_1.png" /> <p>Sedang</p></div>'
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_2.png" /> <p>Rendah</p></div>'
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_3.png" /> <p>Buruk</p></div>'
-            },
-            ]
-        },
-        {
-            label: 'Coral Taman Nasional',
-            selectAllCheckbox: true,
-            children: [{
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNKepSeribu_30.png" /> <p>Coral TN Kepulauan Seribu</p></div>',
-                layer: CoralTNKepseribu
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNBaliBarat_29.png" /> <p>Coral TN Bali Barat</p></div>',
-                layer: coralTNBalibarat
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNUjungKulon_28.png" /> <p>Coral TN Ujung Kulon</p></div>',
-                layer: CoralTNUjungkulon
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNKarimunJawa_27.png" /> <p>Coral TN Karimun Jawa</p></div>',
-                layer: CoralTNKarimunjawa
-            }
-            ]
-        },
-        {
-            label: 'Coral',
-            selectAllCheckbox: true,
-            children: [{
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralUtaraBanten_25.png" /> <p>Coral Utara Banten</p></div>',
-                layer: CoralUtarabanten,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBaratBanten_24.png" /> <p>Coral Barat Banten</p></div>',
-                layer: coralbaratbanten24,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBayuwangi_22.png" /> <p>Coral Banyuwangi</p></div>',
-                layer: coralbanyuwangi,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBlitarMalang_17.png" /> <p>Coral Blitar-Malang</p></div>',
-                layer: coralblitarmalang,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralCagarAlamPulauNusaBarung_20.png" /> <p>Coral Cagar Alam Pulau Nusa Barung</p></div>',
-                layer: coralcagaralampulaunusabarung,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralGarutTasikmalaya_19.png" /> <p>Coral Garut-Tasikmalaya</p></div>',
-                layer: coralgaruttasik,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralLautSukabumi_18.png" /> <p>Coral Laut Sukabumi</p></div>',
-                layer: corallautsukabumi,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralPulauBawean_26.png" /> <p>Coral Pulau Bawen</p></div>',
-                layer: coralpulaubawen,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNAlasPurwo_21.png" /> <p>Coral TN Alas Purwo</p></div>',
-                layer: coralTnalaspurwo,
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNBaluran_23.png" /> <p>Coral TN Baluran</p></div>',
-                layer: CoralTNbaluran,
-            },
-            ]
-        },
-        {
-            label: 'Seagress',
-            selectAllCheckbox: true,
-            children: [{
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBaratBanten_14.png" /> <p>Seagrass Barat Banten</p></div>',
-                layer: SeagrassBaratbanten
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBayuwangi_12.png" /> <p>Seagrass Bayuwangi</p></div>',
-                layer: Seagrassbayuwangi
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBlitarMalang_9.png" /> <p>Seagrass Blitar Malang</p></div>',
-                layer: SeagrassBlitarmalang
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassCagarAlamPulauNusaBarung_10.png" /> <p>Seagrass Cagar Alam Pulau Nusa Barung</p></div>',
-                layer: SeagrassCagarAlamPulauNusabarung
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassGarutTasikmalaya_8.png" /> <p>Seagrass Garut-Tasikmalaya</p></div>',
-                layer: SeagrassGaruttasikmalaya
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassLautSukabumi_7.png" /> <p>Seagrass Laut Sukabumi</p></div>',
-                layer: SeagrassLautsukabumi
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassPulauBawean_16.png" /> <p>Seagrass Pulau Bawean</p></div>',
-                layer: SeagrassPulaubawean
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNAlasPurwo_11.png" /> <p>Seagrass TNA Laspurwo</p></div>',
-                layer: SeagrassTNAlaspurwo
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNBaliBarat_5.png" /> <p>Seagrass TNA Bali Barat</p></div>',
-                layer: SeagrassTNBalibarat
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNBaluran_13.png" /> <p>Seagrass TNA Baluran</p></div>',
-                layer: SeagrassTNbaluran
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNKarimunJawa_3.png" /> <p>Seagrass TNA Karimun Jawa</p></div>',
-                layer: SeagrassTNKarimunjawa
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNKepSeribu_4.png" /> <p>Seagrass TNA Kepulauan Seribu</p></div>',
-                layer: SeagrassTNKepseribu
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNUjungKulon_6.png" /> <p>Seagrass TNA Ujung Kulon</p></div>',
-                layer: SeagrassTNUjungkulon
-            },
-            {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassUtaraBanten_15.png" /> <p>Seagrass TNA Utara Banten</p></div>',
-                layer: SeagrassUtarabanten
-            },
-            ]
-        },
-        {
-            label: 'Informasi Lainnya',
-            children: [{
-                label: 'Zona',
-                layer: zona_2,
+                label: 'Kondisi Terumbu Karang',
+                layer: KondisiTerumbuKarang,
                 children: [{
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_0.png" /> <p>Inti</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_1.png" /> <p>Khusus</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_2.png" /> <p>Pemanfaatan</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_3.png" /> <p>Perlindungan Bahari</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_4.png" /> <p>Rehabilitasi</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_5.png" /> <p>Religi Budaya dan Sejarah</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_6.png" /> <p>Rimba</p></div>',
-                },
-                {
-                    label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_7.png" /> <p>Tradisional</p></div>',
-                },
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_0.png" /> <p>Baik</p></div>'
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_1.png" /> <p>Sedang</p></div>'
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_2.png" /> <p>Rendah</p></div>'
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/KondisiTerumbuKarang_31_3.png" /> <p>Buruk</p></div>'
+                    },
                 ]
             },
             {
-                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/BatasKawasanTamanNasional_1.png" /> <p>Batas Kawasan Taman Nasional</p></div>',
-                layer: batasTamanNas,
+                label: 'Coral Taman Nasional',
+                selectAllCheckbox: true,
+                children: [{
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNKepSeribu_30.png" /> <p>Coral TN Kepulauan Seribu</p></div>',
+                        layer: CoralTNKepseribu
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNBaliBarat_29.png" /> <p>Coral TN Bali Barat</p></div>',
+                        layer: coralTNBalibarat
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNUjungKulon_28.png" /> <p>Coral TN Ujung Kulon</p></div>',
+                        layer: CoralTNUjungkulon
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNKarimunJawa_27.png" /> <p>Coral TN Karimun Jawa</p></div>',
+                        layer: CoralTNKarimunjawa
+                    }
+                ]
+            },
+            {
+                label: 'Coral',
+                selectAllCheckbox: true,
+                children: [{
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralUtaraBanten_25.png" /> <p>Coral Utara Banten</p></div>',
+                        layer: CoralUtarabanten,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBaratBanten_24.png" /> <p>Coral Barat Banten</p></div>',
+                        layer: coralbaratbanten24,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBayuwangi_22.png" /> <p>Coral Banyuwangi</p></div>',
+                        layer: coralbanyuwangi,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralBlitarMalang_17.png" /> <p>Coral Blitar-Malang</p></div>',
+                        layer: coralblitarmalang,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralCagarAlamPulauNusaBarung_20.png" /> <p>Coral Cagar Alam Pulau Nusa Barung</p></div>',
+                        layer: coralcagaralampulaunusabarung,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralGarutTasikmalaya_19.png" /> <p>Coral Garut-Tasikmalaya</p></div>',
+                        layer: coralgaruttasik,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralLautSukabumi_18.png" /> <p>Coral Laut Sukabumi</p></div>',
+                        layer: corallautsukabumi,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralPulauBawean_26.png" /> <p>Coral Pulau Bawen</p></div>',
+                        layer: coralpulaubawen,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNAlasPurwo_21.png" /> <p>Coral TN Alas Purwo</p></div>',
+                        layer: coralTnalaspurwo,
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/CoralTNBaluran_23.png" /> <p>Coral TN Baluran</p></div>',
+                        layer: CoralTNbaluran,
+                    },
+                ]
+            },
+            {
+                label: 'Seagress',
+                selectAllCheckbox: true,
+                children: [{
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBaratBanten_14.png" /> <p>Seagrass Barat Banten</p></div>',
+                        layer: SeagrassBaratbanten
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBayuwangi_12.png" /> <p>Seagrass Bayuwangi</p></div>',
+                        layer: Seagrassbayuwangi
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassBlitarMalang_9.png" /> <p>Seagrass Blitar Malang</p></div>',
+                        layer: SeagrassBlitarmalang
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassCagarAlamPulauNusaBarung_10.png" /> <p>Seagrass Cagar Alam Pulau Nusa Barung</p></div>',
+                        layer: SeagrassCagarAlamPulauNusabarung
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassGarutTasikmalaya_8.png" /> <p>Seagrass Garut-Tasikmalaya</p></div>',
+                        layer: SeagrassGaruttasikmalaya
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassLautSukabumi_7.png" /> <p>Seagrass Laut Sukabumi</p></div>',
+                        layer: SeagrassLautsukabumi
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassPulauBawean_16.png" /> <p>Seagrass Pulau Bawean</p></div>',
+                        layer: SeagrassPulaubawean
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNAlasPurwo_11.png" /> <p>Seagrass TNA Laspurwo</p></div>',
+                        layer: SeagrassTNAlaspurwo
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNBaliBarat_5.png" /> <p>Seagrass TNA Bali Barat</p></div>',
+                        layer: SeagrassTNBalibarat
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNBaluran_13.png" /> <p>Seagrass TNA Baluran</p></div>',
+                        layer: SeagrassTNbaluran
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNKarimunJawa_3.png" /> <p>Seagrass TNA Karimun Jawa</p></div>',
+                        layer: SeagrassTNKarimunjawa
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNKepSeribu_4.png" /> <p>Seagrass TNA Kepulauan Seribu</p></div>',
+                        layer: SeagrassTNKepseribu
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassTNUjungKulon_6.png" /> <p>Seagrass TNA Ujung Kulon</p></div>',
+                        layer: SeagrassTNUjungkulon
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/SeagrassUtaraBanten_15.png" /> <p>Seagrass TNA Utara Banten</p></div>',
+                        layer: SeagrassUtarabanten
+                    },
+                ]
+            },
+            {
+                label: 'Informasi Lainnya',
+                children: [{
+                        label: 'Zona',
+                        layer: zona_2,
+                        children: [{
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_0.png" /> <p>Inti</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_1.png" /> <p>Khusus</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_2.png" /> <p>Pemanfaatan</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_3.png" /> <p>Perlindungan Bahari</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_4.png" /> <p>Rehabilitasi</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_5.png" /> <p>Religi Budaya dan Sejarah</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_6.png" /> <p>Rimba</p></div>',
+                            },
+                            {
+                                label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/Zona_2_7.png" /> <p>Tradisional</p></div>',
+                            },
+                        ]
+                    },
+                    {
+                        label: '<div class="flex gap-1"><img src="assets/layouts/qgis/styles/legend/BatasKawasanTamanNasional_1.png" /> <p>Batas Kawasan Taman Nasional</p></div>',
+                        layer: batasTamanNas,
+                    }
+                ]
             }
-            ]
-        }
         ]
         // const layerControl = L.control.layers(baseLayers, overlays).addTo(map);
         var ctl = L.control.layers.tree(baseLayers, overlays);

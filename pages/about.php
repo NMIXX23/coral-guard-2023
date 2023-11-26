@@ -35,7 +35,7 @@
 				</div>
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
 					<div class="row g-0 text-start">
-						<img class="img-fluid width-100" src="./assets/img/logocg-about.png" />
+						<img class="img-fluid width-100" src="./assets/img/Logogram.png" />
 					</div>
 				</div>
 			</div>
@@ -146,7 +146,7 @@
 				</div>
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
 					<div class="row g-0 text-start">
-						<img class="img-fluid width-100" src="./assets/img/kenalan.png" />
+						<img class="img-fluid width-100" src="./assets/img/image 59.png" />
 					</div>
 				</div>
 			</div>
@@ -163,7 +163,7 @@
 				</h1>
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
 					<div class="row g-0 text-start">
-						<img class="img-fluid width-100" src="./assets/img/Faktor.png" />
+						<img class="img-fluid width-100" src="./assets/img/image 60.png" />
 					</div>
 				</div>
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">

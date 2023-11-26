@@ -124,8 +124,8 @@ $category = [
                 </div>
                 <div class="col-md-4 col-sm-6 fadeInUp mb-3" data-wow-delay="0.5s">
                     <a class="cat-item rounded p-3" a href="" style="background-color: white;">
-                        <img src="./assets/img/icon/Gis.png" alt="Gis & Conservation" />
-                        <h5 class="mb-3">Gis & Conservation</h5>
+                        <img src="./assets/img/icon/Gis.png" alt="GIS" />
+                        <h5 class="mb-3">GIS</h5>
                         <p class="mb-0">5 Informasi Terbaru</p>
                     </a>
                 </div>
@@ -145,22 +145,22 @@ $category = [
                 </div>
                 <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
                     <a class="cat-item rounded p-3" href="" style="background-color: white;">
-                        <img src="./assets/img/icon/News.png" alt="E-Books" />
+                        <img src="./assets/img/icon/News.png" alt="News" />
                         <h5 class="mb-3">News</h5>
                         <p class="mb-0">6 Informasi Terbaru</p>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
                     <a class="cat-item rounded p-3" href="organisasi.php" style="background-color: white;">
-                        <img src="./assets/img/icon/Prabu.png" alt="E-Books" />
-                        <h5 class="mb-3">Praktik & Budidaya</h5>
+                        <img src="./assets/img/icon/Prabu.png" alt="Cultivation" />
+                        <h5 class="mb-3">Cultivation</h5>
                         <p class="mb-0">8 Informasi Terbaru</p>
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 fadeInUp" data-wow-delay="0.7s">
                     <a class="cat-item rounded p-3" href="organisasi.php" style="background-color: white;">
-                        <img src="./assets/img/icon/Penyakit.png" alt="E-Books" />
-                        <h5 class="mb-3">Penyakit</h5>
+                        <img src="./assets/img/icon/Penyakit.png" alt="Disease" />
+                        <h5 class="mb-3">Disease</h5>
                         <p class="mb-0">3 Informasi Terbaru</p>
                     </a>
                 </div>

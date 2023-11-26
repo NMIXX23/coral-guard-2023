@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Add the navbar brand with your logo -->
     <a class="navbar-brand" href="#">
-      <img src="./assets/img/Logo-CORALGUARD.png" alt="Logo" style="width: 80px;"> <!-- Adjust width and height as needed -->
+      <img src="./assets/img/Logogram.png" alt="Logo" style="width: 80px;"> <!-- Adjust width and height as needed -->
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -79,10 +79,10 @@
                 <a class="dropdown-item" target="_blank" href="maps.php">GIS</a>
               </li>
               <?php if (isset($_SESSION['login'])) : ?>
-              <li>
-                <a class="dropdown-item" href="?page=input-lokasi">Tambah Titik</a>
-              </li>
-            <?php endif ?>
+                <li>
+                  <a class="dropdown-item" href="?page=input-lokasi">Tambah Titik</a>
+                </li>
+              <?php endif ?>
             </ul>
           </li>
           <?php if (empty($_SESSION["id_member"])) : ?>
