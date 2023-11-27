@@ -178,7 +178,7 @@ $category = [
             <div class="row g-4">
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="akademik.php">
-                        <img src="./assets/img/founder/nisrina.png" alt="Nisrina Ishmah" class="fit-image" />
+                        <img src="./assets/img/nisi.jpeg" alt="Nisrina Ishmah" class="fit-image" />
                     </a>
                     <div style="
                   align-items: center;
@@ -192,7 +192,7 @@ $category = [
                 </div>
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="nonakademik.php">
-                        <img src="./assets/img/founder/yasir.png" alt="Muhammad Yasir Amri" class="fit-image" />
+                        <img src="./assets/img/yasir.jpeg" alt="Muhammad Yasir Amri" class="fit-image" />
                         <div style="
                     align-items: center;
                     margin-top: 20px;
@@ -205,7 +205,7 @@ $category = [
                 </div>
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="nonakademik.php">
-                        <img src="./assets/img/founder/Rizki.png" alt="Rizki Novian" class="fit-image" />
+                        <img src="./assets/img/kinop.jpeg" alt="Rizki Novian" class="fit-image" />
                     </a>
                     <div style="
                   align-items: center;
@@ -219,7 +219,7 @@ $category = [
                 </div>
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="nonakademik.php">
-                        <img src="./assets/img/founder/afi.png" alt="Huriya Afifah" class="fit-image" />
+                        <img src="./assets/img/afi.jpeg" alt="Huriya Afifah" class="fit-image" />
                     </a>
                     <div style="
                   align-items: center;
@@ -233,7 +233,7 @@ $category = [
                 </div>
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="nonakademik.php">
-                        <img src="./assets/img/founder/dila.png" alt="Wadiaah Nurfadhlah" class="fit-image" />
+                        <img src="./assets/img/wadiah.jpeg" alt="Wadiaah Nurfadhlah" class="fit-image" />
                     </a>
                     <div style="
                   align-items: center;
@@ -247,7 +247,7 @@ $category = [
                 </div>
                 <div class="col-lg-2 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="cat-item-ca" href="nonakademik.php">
-                        <img src="./assets/img/founder/j0.png" alt="Josepri Jamal" class="fit-image" />
+                        <img src="./assets/img/sepri.jpeg" alt="Josepri Jamal" class="fit-image" />
                     </a>
                     <div style="
                   align-items: center;
