@@ -1,5 +1,3 @@
-<?php include "pages/partials/header.php"; ?>
-
 <?php
 include('koneksi.php');
 include('terumbu.php');
@@ -74,7 +72,7 @@ $data_search = json_decode($data_koordinat)->features;
 
 <body>
     <div class="container pt-3">
-        <a href="index.php" class="btn btn-primary btn-sm mb-3">
+        <a href="index.php" class="btn btn-primary btn-sm mb-3" style="color: white;">
             Kembali
         </a>
         <div style="font-size: 30px; color: #008CEE; font-weight: bold;">GIS</div>
@@ -89,43 +87,38 @@ $data_search = json_decode($data_koordinat)->features;
                     <!-- Tombol Pencarian -->
                     <div class="pencarian">
                         <div>
-                            <div class="input-group" style="margin-top: 20px;">
-                                <input name="keyword" id="keyword" type="text" class="form-control border-0" placeholder="Cari Region" style="border-radius: 10px;" />
-                                <button class="btn btn-outline-secondary" type="button" id="button-addon2">
-                                    <i class="fas fa-search"></i> <!-- Ikon search dari Font Awesome -->
-                                </button>
+                            <div style="text-align: center;">
+                                <h4 style="background-color: white; border-radius: 10px; padding: 10px; font-size: 20px; margin-top:10px; color: #008CEE;">Kondisi Terumbu Karang
+                                    <h4>
                             </div>
                         </div>
                     </div>
                     <!-- Keterangan -->
                     <div class="keterangan" style="margin-top: 20px;">
-                        <h5>Keterangan</h5>
-                        <p style="color: #0089ed">Kondisi terumbu karang: </p>
                         <ul>
                             <li>
-                                <span class="red"></span>Buruk
+                                <span class="red"></span><strong>Buruk</strong>
                                 <p>mencerminkan kondisi ekosistem karang yang sangat terganggu, hampir mati, atau sudah mati, strukturnya hancur, dan keanekaragaman hayati rendah.</p>
                             </li>
                             <li>
-                                <span class="orange"></span>Rendah
+                                <span class="orange"></span><strong>Rendah</strong>
                                 <p>mencerminkan kondisi ekosistem karang yang mengalami kerusakan serius, penurunan keanekaragaman hayati, dan minimnya tanda-tanda pemulihan.</p>
                             </li>
                             <li>
-                                <span class="yellow"></span>Sedang
+                                <span class="yellow"></span><strong>Sedang</strong>
                                 <p>mencerminkan kondisi ekosistem karang yang menunjukan tanda-tanda gangguan, beberapa area yang mengalami pemutihan, sampai kerusakan fisik.</p>
                             </li>
                             <li>
-                                <span class="green"></span>Baik
+                                <span class="green"></span><strong>Baik</strong>
                                 <p>mencerminkan kondisi ekosistem karang yang menunjukan tanda-tanda gangguan, beberapa area yang mengalami pemutihan, sampai kerusakan fisik.</p>
                             </li>
                         </ul>
-                        <!-- Tambahkan keterangan sesuai kebutuhan -->
+                        <div class="col-12 mt-3">
+                            <a href="?page=input-lokasi" class="btn btn-primary btn-sm mt-3 col-12" style="border-radius: 10px; color: white;">
+                                Tambah Titik
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 mt-3">
-                    <a href="?page=input-lokasi" class="btn btn-primary btn-sm mt-3 col-12">
-                        Tambaha Titik
-                    </a>
                 </div>
             </div>
         </div>
