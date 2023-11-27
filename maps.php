@@ -114,7 +114,7 @@ $data_search = json_decode($data_koordinat)->features;
                             </li>
                         </ul>
                         <div class="col-12 mt-3">
-                            <a href="?page=input-lokasi" class="btn btn-primary btn-sm mt-3 col-12" style="border-radius: 10px; color: white;">
+                            <a href="" class="btn btn-primary btn-sm mt-3 col-12" style="border-radius: 10px; color: white;">
                                 Tambah Titik
                             </a>
                         </div>
