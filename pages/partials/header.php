@@ -61,6 +61,41 @@
                       <a class="dropdown-item" href="?page=komunitas">Community</a>
                     <?php endif ?>
                   </li>
+                  <li>
+                    <?php if ($_GET["page"] == "komunitas") : ?>
+                      <a class="dropdown-item active" href="?page=komunitas">Power</a>
+                    <?php else : ?>
+                      <a class="dropdown-item" href="?page=komunitas">Power</a>
+                    <?php endif ?>
+                  </li>
+                  <li>
+                    <?php if ($_GET["page"] == "komunitas") : ?>
+                      <a class="dropdown-item active" href="?page=komunitas">E-Book</a>
+                    <?php else : ?>
+                      <a class="dropdown-item" href="?page=komunitas">E-Book</a>
+                    <?php endif ?>
+                  </li>
+                  <li>
+                    <?php if ($_GET["page"] == "komunitas") : ?>
+                      <a class="dropdown-item active" href="?page=komunitas">News</a>
+                    <?php else : ?>
+                      <a class="dropdown-item" href="?page=komunitas">News</a>
+                    <?php endif ?>
+                  </li>
+                  <li>
+                    <?php if ($_GET["page"] == "komunitas") : ?>
+                      <a class="dropdown-item active" href="?page=komunitas">Cultivation</a>
+                    <?php else : ?>
+                      <a class="dropdown-item" href="?page=komunitas">Cultivation</a>
+                    <?php endif ?>
+                  </li>
+                  <li>
+                    <?php if ($_GET["page"] == "komunitas") : ?>
+                      <a class="dropdown-item active" href="?page=komunitas">Disease</a>
+                    <?php else : ?>
+                      <a class="dropdown-item" href="?page=komunitas">Disease</a>
+                    <?php endif ?>
+                  </li>
                 </ul>
           </li>
           <li class="nav-item" style="padding-right: 20px;">

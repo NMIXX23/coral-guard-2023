@@ -15,7 +15,7 @@ $data = $query->fetch_assoc();
 <div class="background-container" style="background-color:  #377ABC;">
 	<div class="container" style="padding-bottom: 50px; padding-top: 50px;">
 		<center>
-			<h3 style="color: white;">Tempat Bio <?php echo $data["kategori"] ?> </h3>
+			<h3 style="color: white;">Wisata <?php echo $data["kategori"] ?> </h3>
 		</center>
 		<div class="row">
 			<?php

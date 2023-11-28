@@ -19,7 +19,7 @@ $category = [
 
 <div class="container-fluid" style="background-color: rgba(128, 128, 128, 0.5); background-image: url('images/background.png'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 400px; background-position: center;">
 	<center style="padding-top: 100px;">
-		<span style="font-size: 45px; font-weight: bold; color: lightskyblue;">
+		<span style="font-size: 45px; font-weight: bold; color: white;">
 			From asking and discussing to <br>
 			understanding!
 		</span>

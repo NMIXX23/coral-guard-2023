@@ -14,17 +14,17 @@ include "pages/partials/header.php";
 
 <div class="container-fluid" style="background-color: rgba(128, 128, 128, 0.5); background-image: url('images/background.png'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 400px; background-position: center;">
 	<center style="padding-top: 100px;">
-		<span style="font-size: 45px; font-weight: bold; color: lightskyblue;">
+		<span style="font-size: 45px; font-weight: bold; color: white;">
 			Jelajahi Keindahan Indonesia
 		</span>
 		<br>
-		<p style="font-size: 22px; color: lightskyblue;">
+		<p style="font-size: 22px; color: white;">
 			Di sini, Anda akan merasakan keindahan <br> terumbu karang yang warna-warni, <br> keanekaragaman biota laut yang menakjubkan, <br>dan panorama bawah laut yang memukau
 		</p>
 	</center>
 </div>
 
-<div class="background" style="background-color:  #377ABC;">
+<div class="background" style="background-color:  #6BC1FE;">
 	<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
 		<center>
 			<h3 style="color: white;">Koleksi Saya</h3>

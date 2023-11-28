@@ -4,23 +4,23 @@ include "partials/header.php";
 
 <div class="container-fluid" style="background-color: rgba(128, 128, 128, 0.5); background-image: url('images/background.png'); background-size: cover; background-repeat: no-repeat; width: 100%; height: 400px; background-position: center;">
 	<center style="padding-top: 100px;">
-		<span style="font-size: 45px; font-weight: bold; color: lightskyblue;">
-			Tempat Bio Idamanmu
+		<span style="font-size: 45px; font-weight: bold; color: white;">
+			Jelajahi Keindahan Indonesia
 		</span>
 		<br>
-		<p style="font-size: 22px; color: lightskyblue;">
-			Tingkatkan kenyamanan tidur Anda dengan menemukan <br> beragam bio berkualitas tinggi yang memberikan sensasi tidur <br> yang luar biasa, menawarkan kehangatan dan kesejukan, serta <br>memberikan pengalaman istirahat yang luar biasa.
+		<p style="font-size: 22px; color: white;">
+			Di sini, Anda akan merasakan keindahan <br> terumbu karang yang warna-warni, <br> keanekaragaman biota laut yang menakjubkan, <br>dan panorama bawah laut yang memukau
 		</p>
 	</center>
 </div>
 
-<div class="background-container" style="background-color:  #377ABC;">
+<div class="background-container" style="background-color:  #6BC1FE;">
 	<div class="container" style="padding-bottom: 50px; padding-top: 50px;">
 		<center>
 			<h3 style="color: white;">Rekomendasi Kami</h3>
 		</center>
 		<?php if (isset($_SESSION['login']) && $_SESSION['login']) : ?>
-			<a href="./?page=koleksi-saya" class="btn btn-outline-light">Koleksi Saya</a>
+			<a href="./?page=koleksi-saya" class="btn btn-primary">Koleksi Saya</a>
 		<?php endif ?>
 		<div class="row gy-4">
 			<?php

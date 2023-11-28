@@ -18,6 +18,7 @@
                         <th class="text-center">Latitude</th>
                         <th class="text-center">Longitude</th>
                         <th class="text-center">Gambar</th>
+                        <th class="text-center">Status</th>
                         <th class="text-center">Validasi</th>
                     </tr>
                 </thead>
@@ -40,6 +41,21 @@
                                     </strong>
                                 <?php else : ?>
                                     <img src="../images/lokasi/<?php echo $data['gambar'] ?>" style="width: 100px;" class="img-fluid">
+                                <?php endif ?>
+                            </td>
+                            <td class="text-center">
+                                <?php if ($data['validasi'] == 1) : ?>
+                                    <span class="badge badge-success">
+                                        Diterima
+                                    </span>
+                                <?php elseif($data['validasi'] == 2) : ?>
+                                    <span class="badge badge-danger">
+                                        Ditolak
+                                    </span>
+                                <?php elseif($data['validasi'] == 0) : ?>
+                                    <span class="badge badge-warning">
+                                        Belum Di Validasi
+                                    </span>
                                 <?php endif ?>
                             </td>
                             <td class="text-center">
