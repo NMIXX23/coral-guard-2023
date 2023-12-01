@@ -1139,6 +1139,14 @@ $data_search = json_decode($data_koordinat)->features;
             }
         }
     </script>
+    <div class="container mt-3 text-center donasi" style="padding-left: 0">
+        <p style="margin-top: 20px; margin-bottom: 20px;">
+            <a href="?page=donasi" class="btn btn-primary btn-sm" style="font-size: 20px; font-weight: bold; width:310px; border-radius: 10px; color: black; padding: 20px; background-color: #C9EBFE; text-decoration: none; display: inline-block;">
+                <img src="./assets/img/Cash in Hand.png" alt="Donation Image" style="width: 50px; vertical-align: middle; margin-right: 10px;">
+                Donasi Yuk!
+            </a>
+        </p>
+    </div>
 </body>
 <?php include "./pages/partials/footer.php"; ?>
 
