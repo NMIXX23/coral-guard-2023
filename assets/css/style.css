@@ -376,12 +376,12 @@ main {
   border: 2px solid #004a74;
 }
 
-.sleep-ai {
+.coral-ai {
   padding: 5px;
 }
 
-.sleep-ai p {
-  color: #004a74;
+.coral-ai p {
+  color: #008CEE;
   text-align: center;
   font-family: Poppins;
   font-size: 15px;
@@ -390,8 +390,8 @@ main {
   line-height: 150%; /* 16.5px */
 }
 
-.sleep-ai-icon {
-  border: 1px solid #004a74;
+.coral-ai-icon {
+  border: 1px solid #008CEE;
   border-radius: 10px;
   padding: 25px;
   margin: 25px 25px;
