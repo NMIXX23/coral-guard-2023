@@ -28,7 +28,7 @@
             <?php endif ?>
           </li>
           <li class="nav-item dropdown" style="padding-right: 20px;">
-            <?php if ($_GET["page"] == "rekomendasi" || $_GET["page"] == "jenis-detail" || $_GET['page'] == "jenis" || $_GET['page'] == "detail-page" || $_GET["page"] == "komunitas" || $_GET["page"] == "koleksi-saya") : ?>
+            <?php if ($_GET["page"] == "rekomendasi" || $_GET["page"] == "jenis-detail" || $_GET['page'] == "jenis" || $_GET['page'] == "detail-page" || $_GET["page"] == "" || $_GET["page"] == "koleksi-saya") : ?>
               <a class="nav-link dropdown-toggle" style="color: #0089ed; font-weight: bold;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <?php else : ?>
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -62,38 +62,38 @@
                     <?php endif ?>
                   </li>
                   <li>
-                    <?php if ($_GET["page"] == "komunitas") : ?>
-                      <a class="dropdown-item active" href="?page=komunitas">Power</a>
+                    <?php if ($_GET["page"] == "") : ?>
+                      <a class="dropdown-item active" href="">Power</a>
                     <?php else : ?>
-                      <a class="dropdown-item" href="?page=komunitas">Power</a>
+                      <a class="dropdown-item" href="">Power</a>
                     <?php endif ?>
                   </li>
                   <li>
-                    <?php if ($_GET["page"] == "komunitas") : ?>
-                      <a class="dropdown-item active" href="?page=komunitas">E-Book</a>
+                    <?php if ($_GET["page"] == "") : ?>
+                      <a class="dropdown-item active" href="">E-Book</a>
                     <?php else : ?>
-                      <a class="dropdown-item" href="?page=komunitas">E-Book</a>
+                      <a class="dropdown-item" href="">E-Book</a>
                     <?php endif ?>
                   </li>
                   <li>
-                    <?php if ($_GET["page"] == "komunitas") : ?>
-                      <a class="dropdown-item active" href="?page=komunitas">News</a>
+                    <?php if ($_GET["page"] == "") : ?>
+                      <a class="dropdown-item active" href="">News</a>
                     <?php else : ?>
-                      <a class="dropdown-item" href="?page=komunitas">News</a>
+                      <a class="dropdown-item" href="">News</a>
                     <?php endif ?>
                   </li>
                   <li>
-                    <?php if ($_GET["page"] == "komunitas") : ?>
-                      <a class="dropdown-item active" href="?page=komunitas">Cultivation</a>
+                    <?php if ($_GET["page"] == "") : ?>
+                      <a class="dropdown-item active" href="">Cultivation</a>
                     <?php else : ?>
-                      <a class="dropdown-item" href="?page=komunitas">Cultivation</a>
+                      <a class="dropdown-item" href="">Cultivation</a>
                     <?php endif ?>
                   </li>
                   <li>
-                    <?php if ($_GET["page"] == "komunitas") : ?>
-                      <a class="dropdown-item active" href="?page=komunitas">Disease</a>
+                    <?php if ($_GET["page"] == "") : ?>
+                      <a class="dropdown-item active" href="">Disease</a>
                     <?php else : ?>
-                      <a class="dropdown-item" href="?page=komunitas">Disease</a>
+                      <a class="dropdown-item" href="">Disease</a>
                     <?php endif ?>
                   </li>
                 </ul>

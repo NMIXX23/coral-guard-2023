@@ -260,3 +260,12 @@ ul {
 .kon {
     background-color: white;
 }
+
+.donasi {
+    width:200px; 
+    border-radius: 10px; 
+    color: white; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    padding: 0px;
+  }

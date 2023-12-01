@@ -233,15 +233,21 @@ include "pages/partials/header.php";
 				</div>
 			</div>
 
-			<div class="card" style="border: 1px solid blue;">
-				<div class="card-body text-center">
-					<h5 class="text-start">CORAL AI</h5>
-					<hr>
-					<img src="./assets/img/chatbot.png" alt="chatbot" class="rounded py-3 px-5 mb-3 mx-auto" style="border: 1px solid blue;">
-					<p>
-						Taking along time to get an answer? or not satisfied with the answers from forun communities? Just ask out chatbot, come on!
-					</p>
-				</div>
+			<div class="card" style="border: 1px solid blue;"><a href="https://coral-ai.site/">
+					<div class="card-body text-center">
+						<h5 class="text-start">CORAL AI</h5>
+						<hr>
+						<img src="./assets/img/chatbot.png" alt="chatbot" class="rounded py-3 px-5 mb-3 mx-auto" style="border: 1px solid blue;">
+						<p>
+							Taking along time to get an answer? or not satisfied with the answers from forun communities? Just ask out chatbot, come on!
+						</p>
+					</div>
+				</a>
+			</div>
+			<div class="container mt-3 text-center donasi">
+				<a href="?page=donasi" class="btn btn-primary btn-sm col-12" style="width:200px; border-radius: 10px; color: white; margin-top: 20px; margin-bottom: 20px; padding: 20px">
+					Donasi Yuk!
+				</a>
 			</div>
 		</div>
 	</div>

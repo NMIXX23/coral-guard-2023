@@ -132,7 +132,7 @@
 			<div class="row g-5 align-items-center">
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
 					<h1 class="mb-4" style="color: #008cee; width: 60%;">Kenalan sama Terumbu Karang, Yuk!</h1>
-					<p class="mb-4">
+					<p class="mb-4" id="paragraph">
 						Terumbu karang merupakan ekosistem yang dibangun oleh biota laut
 						penghasil kapur, terutama oleh hewan karang, yang hidup di dasar
 						laut maupun kolom air. Hewan karang, yang merupakan penyusun
@@ -141,7 +141,7 @@
 						merupakan bagian yang keras. Pada bagian polip terdapat tentakel
 						(tangan-tangan) untuk menangkap plankton sebagai sumber
 						makanannya. Setiap polip karang mengsekresikan zat kapur CaCO
-						yang membentuk kerangka skeleton karang
+						yang membentuk kerangka skeleton karang <a href="#" onclick="toggleReadMore()">Read More</a>
 					</p>
 				</div>
 				<div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
@@ -188,7 +188,7 @@
 						6. Arus dan sirkulasi air laut Arus dan sirkulasi air diperlukan dalam penyuplaian makanan guna pertumbuhan karang dan suplai oksigen dari laut lepas.
 					</ul>
 					<ul style="list-style-type: decimal;">
-						7. Substrat Larva karang yang disebut planula memerlukan substrat yang keras dan stabil untuk menempel, hingga tumbuh menjadi karang dewasa
+						7. Substrat Larva karang yang disebut planula memerlukan substrat yang keras dan stabil untuk menempel, hingga tumbuh menjadi karang dewasa <a href="#" onclick="toggleReadMore()">Read More</a>
 					</ul>
 					</p>
 				</div>

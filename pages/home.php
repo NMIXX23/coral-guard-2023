@@ -76,9 +76,12 @@ $category = [
                                     <option value="Biodiversity">Biodiversity</option>
                                     <option value="Power">Power</option>
                                     <option value="Adventure">Adventure</option>
-                                    <option value="Conservation">Conservation</option>
+                                    <option value="Conservation">GIS</option>
                                     <option value="Community">Community</option>
                                     <option value="E-Books">E-Books</option>
+                                    <option value="E-Books">News</option>
+                                    <option value="E-Books">Cultivation</option>
+                                    <option value="E-Books">Disease</option>
                                 </select>
                             </div>
                         </div>

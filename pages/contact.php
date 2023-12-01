@@ -73,8 +73,9 @@
 						<label for="dropdown"></label>
 						<select id="dropdown" name="dropdown">
 							<option value="" disabled selected hidden>How did you find us?</option>
-							<option value="option1">Option 1</option>
-							<option value="option2">Option 2</option>
+							<option value="option1"><a href="https://www.tiktok.com/@coralguardindonesia">Tiktok</a></option>
+							<option value="option2"><a href="https://www.instagram.com/support_coralguard/">Instagram</a></option>
+							<option value="option3"><a href="https://www.facebook.com/profile.php?id=61552101877841">Facebook</a></option>
 						</select>
 					</div>
 				</div>
