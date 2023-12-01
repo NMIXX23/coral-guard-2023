@@ -39,11 +39,11 @@
                   <li>
                     <?php if ($_GET["page"] == "detail-page" || $_GET["page"] == "jenis" || $_GET["page"] == "jenis-detail") : ?>
                       <a class="dropdown-item active" href="?page=jenis">
-                        Biodiversity
+                        Knowledge
                       </a>
                     <?php else : ?>
                       <a class="dropdown-item" href="?page=jenis">
-                        Biodiversity
+                        Knowledge
                       </a>
                     <?php endif ?>
                   </li>
@@ -61,7 +61,7 @@
                       <a class="dropdown-item" href="?page=komunitas">Community</a>
                     <?php endif ?>
                   </li>
-                  <li>
+                  <!-- <li>
                     <?php if ($_GET["page"] == "") : ?>
                       <a class="dropdown-item active" href="">Power</a>
                     <?php else : ?>
@@ -95,7 +95,7 @@
                     <?php else : ?>
                       <a class="dropdown-item" href="">Disease</a>
                     <?php endif ?>
-                  </li>
+                  </li> -->
                 </ul>
           </li>
           <li class="nav-item" style="padding-right: 20px;">
