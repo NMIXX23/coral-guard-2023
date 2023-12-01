@@ -5,13 +5,13 @@
 <div class="row">
     <div class="col-md-12">
         <div class="alert alert-success">
-            Selamat Datang 
+            Selamat Datang
             <strong>
                 <?php echo $_SESSION["username"] ?>
             </strong>
             di
             <strong>
-                Website Coral Guard!
+                Dashboard Admin Website Coral Guard!
             </strong>
             <hr>
             Silahkan Pilih Menu Untuk Memulai Program.
@@ -96,3 +96,52 @@
         </div>
     </div>
 </div>
+
+
+<div class="row" style="margin-bottom: 20px;">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+$label = ['Baik', 'Sedang', 'Buruk', 'Rendah'];
+?>
+
+<?php
+$query_maps = $con->query("SELECT * FROM t_maps");
+
+if ($query_maps) {
+    $data_maps = $query_maps->fetch_all(MYSQLI_ASSOC);
+
+    $kategori_counts = array_count_values(array_column($data_maps, 'kategori'));
+}
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    const ctx = document.getElementById('myChart').getContext("2d");
+
+    new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: <?php echo json_encode($label) ?>,
+            datasets: [{
+                label: '# of Votes',
+                data: <?php echo json_encode(array_values($kategori_counts)) ?>,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>

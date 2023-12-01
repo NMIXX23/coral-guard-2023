@@ -33,6 +33,20 @@ $data_search = json_decode($data_koordinat)->features;
         <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
         <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+        <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
 
 
         <!-- Google Web Fonts -->
@@ -170,6 +184,124 @@ $data_search = json_decode($data_koordinat)->features;
 
         <script type="text/javascript">
             new DataTable('#example');
+        </script>
+        <script src="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.js"></script>
+        <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/layouts/qgis/layers/BatasKawasanTamanNasional_1.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralBaratBanten_24.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralBayuwangi_22.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralBlitarMalang_17.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralCagarAlamPulauNusaBarung_20.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralGarutTasikmalaya_19.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralLautSukabumi_18.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralPulauBawean_26.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNAlasPurwo_21.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNBaliBarat_29.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNBaluran_23.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNKarimunJawa_27.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNKepSeribu_30.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralTNUjungKulon_28.js"></script>
+        <script src="assets/layouts/qgis/layers/CoralUtaraBanten_25.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassBaratBanten_14.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassBayuwangi_12.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassBlitarMalang_9.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassCagarAlamPulauNusaBarung_10.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassGarutTasikmalaya_8.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassLautSukabumi_7.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassPulauBawean_16.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNAlasPurwo_11.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNBaliBarat_5.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNBaluran_13.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNKarimunJawa_3.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNKepSeribu_4.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassTNUjungKulon_6.js"></script>
+        <script src="assets/layouts/qgis/layers/SeagrassUtaraBanten_15.js"></script>
+        <script src="assets/layouts/qgis/layers/Zona_2.js"></script>
+        <script src="assets/layouts/qgis/layers/KondisiTerumbuKarang_31.js"></script>
+        <script>
+            // var map = L.map('map').setView([-6.6318077, 106.6751343], 8);
+            function getDataSearch() {
+                let data;
+                $.ajax({
+                    url: 'action.php',
+                    method: "GET",
+                    dataType: 'json',
+                    async: false,
+                    success: function(res) {
+                        data = res;
+                    }
+                })
+                return data;
+            }
+            const tileLay = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            });
+            //
+            var batasKawasanTamanNasional1 = L.geoJSON(json_BatasKawasanTamanNasional_1, {
+                color: 'rgba(255,1,255,1.0)',
+                fillColor: '#ffffff',
+                fillOpacity: 0,
+                width: 3
+            }).bindPopup(function(layer) {
+                // console.log(layer.feature.properties.Region);
+                return layer.feature.properties.Region;
+            }).setZIndex(1)
+            const batasTamanNas = L.layerGroup([batasKawasanTamanNasional1]);
+            //end
+            //
+            var zona2 = L.geoJSON(json_Zona_2, {
+                    style: function(feature) {
+                        let color = 'rgba(37,104,35,1.0)'
+                        switch (feature.properties.Zona) {
+                            case 'Rimba':
+                                color = 'rgba(224,226,76,1.0)';
+                                break;
+                            case 'Khusus':
+                                color = 'rgba(210,209,199,1.0)';
+                                break;
+                            case 'Pemanfaatan':
+                                color = 'rgba(180,237,24,1.0)';
+                                break;
+                            case 'Pemanfaatan':
+                                color = 'rgba(180,237,24,1.0)';
+                                break;
+                            case 'Perlindungan Bahari':
+                                color = 'rgba(97,144,220,1.0)';
+                                break;
+                            case 'Rehabilitasi':
+                                color = 'rgba(1,255,238,1.0)';
+                                break;
+                            case 'Religi Budaya dan Sejarah':
+                                color = 'rgba(255,1,234,1.0)';
+                                break;
+                            case 'Tradisional':
+                                color = 'rgba(140,113,24,1.0)';
+                                break;
+                            case 'Inti':
+                                color = 'rgba(213,43,51,1.0)';
+                                break;
+                            default:
+                                color = 'rgba(37,104,35,1.0)'
+                                break;
+                        }
+                        return {
+                            color: '#ffffff',
+                            fillColor: color,
+                            opacity: 0,
+                            fillOpacity: 1
+                        }
+                    }
+                }).bindPopup(function(layer) {
+                        console.log(layer.feature.properties);
+                        let pop = `
+    <script type="text/javascript">
+    $("#example").DataTable({
+        dom: 'Bfrtip',
+        buttons: [
+        'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    })
         </script>
         <script src="https://jjimenezshaw.github.io/Leaflet.Control.Layers.Tree/L.Control.Layers.Tree.js"></script>
         <script src="https://unpkg.com/leaflet-search@2.3.7/dist/leaflet-search.src.js"></script>
